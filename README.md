@@ -1,4 +1,5 @@
-# EdaTeam
+
+# Recipes for students
 + Home page (main) (Балабанова Надежда)
   + Search
   + Filter
