@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0
+}
+
+header {
+    display: flex;
+    align-items: center; /* Выравнивание по вертикали */
+    background-color:#FBCF7E;
+}
+header .slogan{    
+    display:block;    
+    margin-left: 10px;
+    text-align: center;
+    width: 165px;    
+}
+header .text-slogan{
+    display: block;
+    text-decoration: none;
+    color: #EC3C52;
+    font-family: "Merriweather"; 
+    font-weight: 700;
+    font-size: 25px;
+    text-align: left;
+    line-height: 1.15;
+}
+header  .bottom{
+    font-size: 22px;    
+}
+header img{
+    display: block;
+    margin: 12px 0px  12px 18px;
+    width: 84px;
+}
+
+header .login-signin{
+    margin-left: auto;
+    margin-right: 30px;
+    
+}
+
+header .text-login-sigin{
+    display: block;
+    text-decoration: none;
+    font-family: "Merriweather"; 
+    font-weight: 700;
+    font-size: 20px;
+    color: #ec3c52;
+}
+main {
+    /* background-color: lightgray; */
+}
+main .section-main {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 150px;
+    min-height: 800px;
+    padding-top: 112px;
+}
+
+main .section-main .left-block{
+    width: 685px;
+}
+main .section-main .left-block .favorites-block{
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5), 0 0 20px 0 rgba(0, 0, 0, 0.3), 0 0 5px 0 rgba(0, 0, 0, 0.1);
+    background-color: #FDD8C3;
+    height: 467px;
+    border-radius: 20px;
+    padding-top: 36px;
+
+}
+main .section-main .left-block .favorites-block h2{    
+    text-align: center;
+    color: #711511;    
+    font-weight: 700;
+    font-family: "Merriweather";
+}
+
+main .section-main .left-block .favorites-block .dishes{
+    
+    margin-top: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 350px;
+}
+main .section-main .left-block .favorites-block .dish{
+   
+
+}
+main .section-main .left-block .favorites-block .dish p{
+    
+    margin-left: 77px;
+    margin-right: 77px;
+    display: inline-block;
+    color: #711511;
+    font-weight: 700;
+    font-size: 20px;
+    font-family: "Merriweather";
+}
+main .section-main .left-block .favorites-block .dish a{
+    
+    margin-left: 77px;
+    margin-right: 77px;
+    display: block;
+    text-decoration: none;
+    font-family: "Merriweather"; 
+    font-weight: 700;
+    font-size: 15px;
+    color: #711511;
+}
+
+
+main .section-main .left-block .add-recept-block
+{
+    display: flex;    
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5), 0 0 20px 0 rgba(0, 0, 0, 0.3), 0 0 5px 0 rgba(0, 0, 0, 0.1);
+    background-color: #FDD8C3;
+    border-radius: 20px;
+    height: 116px;
+    margin-top: 70px;
+    justify-content: center;
+}
+
+main .section-main .left-block .add-recept-block a{
+    margin: auto;
+    font-size: 25px;
+    text-decoration: none;
+    text-align: center;
+    color: #711511;
+    font-weight: 700;
+    font-family: "Merriweather";    
+}
+
+main .section-main .right-block{
+    height: 656px;
+    background-color:    #FDD8C3;
+    border-radius: 20px;
+    width: 440px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5), 0 0 20px 0 rgba(0, 0, 0, 0.3), 0 0 5px 0 rgba(0, 0, 0, 0.1);
+}
+
+main .section-main .right-block .image-profile{
+    display: block;
+    height: 45%; 
+    width: 100%;
+    border-radius: 20px;
+    margin-bottom: 40px;
+}
+main .section-main .right-block p{    
+    text-align: center;
+    color: #711511;
+    font-weight: 700;
+    font-family: "Merriweather";
+}
+main .section-main .right-block .image-favotites{
+    display: block;
+    height: 15%;
+    width: 15%;
+    margin: 0px auto;
+    
+}
+
+main .section-main .right-block a{
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    color: #711511;
+    font-weight: 700;
+    font-family: "Merriweather";
+    visibility: collapse;
+}
+
+main {
+    background-image: url("https://images.wallpaperscraft.ru/image/single/sup_podnos_eda_87369_1600x900.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    
+}
