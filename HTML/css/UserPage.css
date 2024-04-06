@@ -2,11 +2,17 @@
     margin: 0;
     padding: 0
 }
-
+:root { 
+    --color-text-main: #711511; 
+    --color-text-head-foot: #EC3C52; 
+    --color-background-head-foot: #fbd07e; 
+    --color-back-card: #fdd8c3; 
+    --main-font: "Merriweather", sans-serif; 
+}
 header {
     display: flex;
     align-items: center; /* Выравнивание по вертикали */
-    background-color:#FBCF7E;
+    background:linear-gradient(180deg, #fbd07e 0%, #fffefd 100%);
 }
 header .slogan{    
     display:block;    
@@ -171,11 +177,46 @@ main .section-main .right-block a{
     visibility: collapse;
 }
 
-main {
-    background-image: url("https://images.wallpaperscraft.ru/image/single/sup_podnos_eda_87369_1600x900.jpg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center center;
-    background-size: cover;
-    
+
+footer { 
+    width: calc(100%-30px); 
+    height: calc(108px - 15px); 
+    padding: 15px; 
+    background: linear-gradient(360deg, var(--color-background-head-foot) 0%, #fffefd 100%); 
+    align-items: flex-end; 
+    display: flex; 
+    justify-content: space-between; 
+}
+
+.all-links-tg { 
+    display: flex; 
+    flex-direction: row; 
+    justify-content: flex-start; 
+ 
+} 
+ 
+.link-tg { 
+    text-decoration: none; 
+    display: flex; 
+    margin-right: 23px; 
+} 
+ 
+.logo-tg { 
+    width: 27px; 
+    margin-right: 3px; 
+} 
+ 
+.link-tg-text { 
+    font-family: "Merriweather"; 
+    font-weight: bold; 
+    font-size: 12px; 
+    color: var(--color-text-head-foot); 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+} 
+ 
+.logo-footer { 
+    width: 60px; 
+    border-radius: 39px; 
 }
