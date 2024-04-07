@@ -1,0 +1,31 @@
+
+@media screen and (max-width: 1200px) {
+    html{
+        font-size: 1.67vw;
+    }
+}
+ 
+@media screen and (max-width: 768px) {
+    html{
+        font-size: 3.7vw;
+    }
+    main .section-main .right-block{
+        display: none;
+    }
+    
+    main .section-main{
+        padding-top:0.5rem;
+        margin: 2.4rem;
+        min-height: 33rem;
+    }
+    main .section-main .left-block{
+        width: 21.6rem;
+        height: 10rem;
+    }
+    main .section-main .left-block .favorites-block{
+        padding-top: 0.5rem;
+    }
+    main .section-main .left-block .add-recept-block{
+        margin-top: 2rem;
+    }
+}
