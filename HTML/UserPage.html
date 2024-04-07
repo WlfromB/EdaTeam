@@ -24,7 +24,7 @@
         </div>
         
         <div class="login-signin">
-            <a class="text-login-sigin" href="#">
+            <a class="text-login-sigin" href="#" id="loginLink">
                 Вход
             </a>
         </div>        
@@ -80,6 +80,20 @@
                 <img src="assets/Icons/heart-red-svgrepo-com.svg" alt="Переключатель на избранное: сердечко" class="image-favotites">
                 <a href="#">История</a>
             </div>
+
+
+            <div id="loginModal" class="modal">
+                
+                <div class="modal-content">        
+                    <span class="close">&times;</span>          
+                  <h2 class="header-modal">Вход в аккаунт</h2>                  
+                  <form class="login-form">
+                    <input type="text" id="username" name="username" class="input-block" placeholder="Имя пользователя"/>
+                    <input type="password" id="password" name="password" class="input-block" placeholder="Пароль"/>
+                    <button type="submit" class="submit-button">Войти</button>
+                  </form>
+                </div>
+              </div>
         </section>       
     </main>
     <footer> 
@@ -101,5 +115,6 @@
           <img class="logo-footer" src="./assets/Icons/logo img.png" alt="Логотип сайта"> 
         </a> 
       </footer>
+      <script src="./UserPage.js"></script>
 </body>
 </html> 
