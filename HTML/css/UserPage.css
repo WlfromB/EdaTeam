@@ -59,7 +59,7 @@ header .text-login-sigin{
     color: var(--color-text-head-foot);
 }
 main {
-    /* background-color: lightgray; */
+    background-image: url('/HTML/assets/Images/BackPage.jpg');
     font-family: var(--main-font);
 }
 main .section-main {
@@ -247,7 +247,8 @@ footer {
   border: 0.05rem solid #888;
   width: 36rem;
   height: 26rem;
-  box-shadow: -1px -1px 4px 0 rgba(0, 0, 0, 0.25), 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: -1px -1px 4px 0 rgba(0, 0, 0, 0.25), 0 4px 4px 0 rgba(0, 0, 0, 0.25);  
+  transition: transform 0.5s ease;
 }
 
 .close {
@@ -285,7 +286,7 @@ footer {
 
 .submit-button{
     min-height: 2rem;
-    margin:0rem 3rem 3rem 3rem;
+    margin:0rem 7rem 3rem 7rem;
     border-radius: 0.6rem;
     border:none;
     padding: 0.5rem;
