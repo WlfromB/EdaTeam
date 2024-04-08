@@ -1,14 +1,16 @@
 
+
 @media screen and (max-width: 1200px) {
     html{
         font-size: 1.67vw;
     }
 }
- 
+
 @media screen and (max-width: 768px) {
     html{
         font-size: 3.7vw;
     }
+   
     main .section-main .right-block{
         display: none;
     }
@@ -22,10 +24,37 @@
         width: 21.6rem;
         height: 10rem;
     }
+    main .section-main .left-block .favorites-block .orange-line{
+        margin: -2.5rem 7.5rem 0 7.5rem;
+    }
     main .section-main .left-block .favorites-block{
-        padding-top: 0.5rem;
+        padding-top: 2.4rem;
     }
     main .section-main .left-block .add-recept-block{
         margin-top: 2rem;
+    }
+
+    main .section-main .modal .modal-content{
+        width: 23.7rem;
+        height: 18.5rem;
+
+    }
+
+    main .section-main .modal .modal-content .submit-button{
+        font-size: 0.9rem;
+        font-weight: 600;
+        border-radius: 0.4rem;
+        padding: 0;
+        margin: 0 3.2rem 0rem 3.2rem;
+    }
+
+    main .section-main .modal .modal-content .header-modal{
+        margin: 0 3.4rem 0.5rem 3.4rem;
+        padding: 0.4rem 0.05rem;
+        font-size: 1.5rem;
+    }
+
+    main .section-main .modal .modal-content .input-block{
+        margin: 0 1.4rem 1.5rem;
     }
 }

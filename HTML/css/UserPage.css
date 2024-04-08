@@ -55,7 +55,7 @@ header .text-login-sigin{
     display: block;
     text-decoration: none;
     font-weight: 700;
-    font-size: 1rem;
+    font-size: 1.25rem;
     color: var(--color-text-head-foot);
 }
 main {
@@ -78,29 +78,30 @@ main .section-main .left-block .favorites-block{
     background-color: #FDD8C3;
     height: 23.35rem;
     border-radius: 1rem;
-    padding-top: 1.8rem;
+    padding-top: 2.4rem;
 
 }
 main .section-main .left-block .favorites-block h2{    
     text-align: center;
     color: var(--color-text-main); 
     font-weight: 700;
+    margin-top: -0.6rem;
 }
-
-main .section-main .left-block .favorites-block .dishes{
+main .section-main .left-block .favorites-block .orange-line{
+    height: 0.15rem;
+    background-color: var(--color-background-head-foot);
+    margin: -2.5rem auto;
+    min-width: 6.6rem;    
+}
+main .section-main .left-block .favorites-block .dishes{    
     
-    margin-top: 1.1rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 17.5rem;
 }
-main .section-main .left-block .favorites-block .dish{
-   
 
-}
-main .section-main .left-block .favorites-block .dish p{
-    
+main .section-main .left-block .favorites-block .dish p{   
     margin-left: 3.85rem;
     margin-right: 3.85rem;
     display: inline-block;
@@ -112,13 +113,20 @@ main .section-main .left-block .favorites-block .dish p{
 main .section-main .left-block .favorites-block .dish a{   
     display: block;
     text-decoration: none;
+    margin-top: 0.25rem;
     margin-left: 3.85rem;
     margin-right: 3.85rem;
     font-weight: 700;
     font-size: 0.75rem;
     color: var(--color-text-main);
 }
-
+main .section-main .left-block .favorites-block .dish .orange-line-dish{
+    height: 0.1rem;
+    margin-top: 0.25rem;
+    margin-left: 3.85rem;
+    margin-right: 3.85rem;
+    background-color: var(--color-background-head-foot);
+}
 
 main .section-main .left-block .add-recept-block
 {

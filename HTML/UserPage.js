@@ -25,6 +25,10 @@ closeBtn.addEventListener("click", () => {
 // Обработчик события для закрытия модального окна при клике за его пределами
 window.addEventListener("click", (event) => {
   if (event.target == modal) {
-    modal.style.display = "none";
+    loginFormContainer.style.transform = 'translateY(0rem)';
+    setTimeout(()=>{
+      loginFormContainer.style.transform = 'translateY(-36rem)';
+    }, 10);
+    setTimeout(()=>{modal.style.display = "none"},510);
   }
 });
