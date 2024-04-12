@@ -1,14 +1,15 @@
 import React from 'react';
 import HomePage from './pages/home-page';
-import TestPage from './pages/UserPage';
+import Recipe from './pages/recipe';
 import UserPage from './pages/UserPage';
 
 
 const App = () => {
   return (
-    <UserPage />
+    <Recipe />
   );
 };
 
 export default App;
+
 
