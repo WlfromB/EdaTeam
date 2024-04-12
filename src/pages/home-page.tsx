@@ -7,9 +7,11 @@ import './hp_media.css';
 import { logo } from '../assets/'
 import { ico_filters } from '../assets/'
 import { SearchIcon } from '../assets/'
+
 import { logo_img } from '../assets/'
 import { logo_tg } from '../assets/'
 import { person } from '../assets/'
+
 import { pancakes_meat } from '../assets/'
 import { borsch } from '../assets/'
 import { canned_soup } from '../assets/'
