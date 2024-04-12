@@ -84,18 +84,32 @@
             </div>
 
 
-            <div id="loginModal" class="modal">
-                
+            <div id="loginModal" class="modal">                
                 <div class="modal-content">        
                     <span class="close">&times;</span>          
                   <h2 class="header-modal">Вход в аккаунт</h2>                  
                   <form class="login-form">
-                    <input type="text" id="username" name="username" class="input-block" placeholder="Имя пользователя"/>
-                    <input type="password" id="password" name="password" class="input-block" placeholder="Пароль"/>
-                    <button type="submit" class="submit-button">Войти</button>
+                    <input type="text" id="login-username" name="username" class="input-block" placeholder="Имя пользователя"/>
+                    <input type="password" id="login-password" name="password" class="input-block" placeholder="Пароль"/>
+                    <button type="submit" class="submit-button" >Войти</button>
+                    <a href="#" id="signinLink" class="signin-link">Зарегистрироваться</a>
                   </form>
                 </div>
-              </div>
+            </div>
+            
+            <div id="signinModal" class="signin-modal">
+                <div class="signin-modal-content">
+                    <span  class = "close-signin">&times; </span>
+                    <h2 class="signin-header-modal">Регистрация</h2>
+                    <form class="signin-form">
+                        <input type="text" id="sigin-username" name="username" class="signin-input-block" placeholder="Имя пользователя"/>
+                        <input type="password" id="sigin-password" name="password" class="signin-input-block" placeholder="Пароль"/> 
+                        <input type="password" id="an-sign-password" name="password" class="signin-input-block" placeholder="Повторите пароль"/> 
+                        <button type="submit" class="signin-button">Готово!</button>
+                    </form>
+                </div>
+            </div>
+            
         </section>       
     </main>
     <footer> 
@@ -116,7 +130,8 @@
         <a href="#"> 
           <img class="logo-footer" src="./assets/Icons/logo img.png" alt="Логотип сайта"> 
         </a> 
-      </footer>
+      </footer>      
       <script src="./UserPage.js"></script>
+      <script src="./siginForm.js"></script>
 </body>
 </html> 

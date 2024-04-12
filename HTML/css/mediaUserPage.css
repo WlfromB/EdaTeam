@@ -57,4 +57,42 @@
     main .section-main .modal .modal-content .input-block{
         margin: 0 1.4rem 1.5rem;
     }
+    main .section-main .modal .modal-content .signin-link{
+        margin: 0.4rem auto;
+    }
+
+    
+
+
+
+
+
+
+
+
+
+
+    
+    main .section-main .signin-modal .signin-modal-content{
+        width: 23.7rem;
+        height: 21.5rem;
+
+    }
+   
+    main .section-main .signin-modal .signin-modal-content .signin-header-modal{
+        margin: 0 3.4rem 0.5rem 3.4rem;
+        padding: 0.4rem 0.05rem;
+        font-size: 1.5rem;
+    }
+    main .section-main .signin-modal .signin-modal-content .signin-form .signin-input-block {
+        margin: 0 1.4rem 1.5rem;
+    }
+    main .section-main .signin-modal .signin-modal-content .signin-form .signin-button{
+        font-size: 0.9rem;
+        font-weight: 600;
+        border-radius: 0.4rem;
+        padding: 0;
+        margin: 0 3.2rem 0rem 3.2rem;
+    }
+
 }
