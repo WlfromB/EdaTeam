@@ -14,7 +14,7 @@ closeSignin.addEventListener("click", () => {
 
 // Обработчик события для закрытия модального окна при клике за его пределами
 window.addEventListener("click", (event) => {
-    if (event.target == modal) {
+    if (event.target == signModal) {
         siginFormContainer.style.transform = 'translateY(0rem)';
       setTimeout(()=>{
         siginFormContainer.style.transform = 'translateY(-36rem)';
