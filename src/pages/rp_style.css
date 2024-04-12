@@ -1,0 +1,462 @@
+:root { 
+    --color-text-main: #711511; 
+    --color-text-head-foot: #EC3C52; 
+    --color-background-head-foot: #fbd07e; 
+    --color-footer:  #fde8c0;
+    --color-back-card: #fdd8c3; 
+    --main-font: "Merriweather", sans-serif; 
+}
+
+
+main{
+    
+    /* background-image: url('assets/back2.png');   */
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+} 
+/* .container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
+} */
+
+/* ШАПКА СТРАНИЦЫ ----------------------------------------------------------*/
+header {            
+    /* background-color: #FBCF7E; */
+    color: var( --color-text-head-foot);
+    height: 108px;
+    max-width: 100%;
+    margin-bottom: 61px;
+    background: linear-gradient(180deg,var(--color-background-head-foot) 0%, #fffefd 100%);
+}
+
+.logo1 {
+    height: 306; /* Высота логотипа */
+    max-width: 83;
+    position: absolute;
+    top: 12px;
+    left: 18px;
+}
+
+.login_registration {
+    color:var( --color-text-head-foot);
+    position: absolute;
+    text-decoration: none;
+    top: 38px;
+    right: 35px;
+    font-family: var(--main-font);
+    font-weight: 700;
+    font-style: normal;
+    font-size: 20px;
+}
+.logo-enter{
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    top: 35px;
+    right: 118px;
+}
+
+/* ОСНОВНОЙ КОНТЕНТ СТРАНИЦЫ ----------------------------------------------*/
+
+.dish_name{
+    text-align: center;
+    font-family: var(--main-font);
+    font-size: 40px;
+    font-weight: bold; /*bold=700)*/
+    color: #711122;
+    margin-bottom: 45px;
+}
+
+.video_recipe{
+    width: 670px;
+    height: 379px;
+    margin-bottom: 20px;
+    display: block;
+    margin: 0 auto;    
+}
+
+.tags {
+    text-align: center;
+    margin: 16px auto 0;
+}
+
+.tag,.tag-link {
+    color: var(--color-text-main);
+    display: inline-block; /* Чтобы теги были в строку */
+    margin-right: 10px; /*Добавляем немного отступов между тегами*/
+    font-size: 20px;
+    font-weight: regular;
+}
+
+table {
+    margin: 30px auto 0;
+    border-collapse: collapse; /* объединяем границы */
+    width: 654px; /* задаем ширину таблицы */
+    background-color: #FDDCC9; /*  фоновый цвет таблицы */
+    color:var(color-text-main);
+}
+
+th{
+    font-family:var(--main-font);
+    font-size: 20px;
+    font-weight: bold; 
+}
+
+td{
+    font-family: var(--main-font);
+    font-size: 18px;
+    font-weight: regular;
+}
+th, td {
+    border: 1px solid #5B5B5B; /*  граница для ячеек */
+    padding: 8px; /*отступ внутри ячеек*/
+}
+
+thead th {
+    text-align: left;
+    padding: 8px;
+}
+
+.instruction{
+    border: 1px solid var(--color-text-main);
+    width: 670px;
+    height: 618px;
+    color:var(--color-text-main);
+    margin: 65px auto 0px;
+    /* position: relative; */
+}
+
+.instruc{
+    font-family: var(--main-font);
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    
+    padding: 025px;
+}
+
+
+.stages{
+
+    padding: 0 66px 66px 66px;
+    font-family: var(--main-font);
+    font-size: 20px;
+    font-weight: regular;
+}
+/* footer{
+    
+    height: 107px;
+    width: 100%;
+    background: linear-gradient(360deg, #fbd07e 0%, #fffefd 100%);
+}
+
+.feedback1{
+    width: 27px;
+height: 26px;
+/* margin-left: 15px;
+margin-bottom: 15px; */
+
+/* 
+.name-feedback{
+    color: #EC3C52;
+    margin-bottom: 15px;
+    margin-left: 15px;
+}
+.logo2{
+
+    border-radius: 39px;
+width: 60px;
+height: 59px;
+}  */
+
+footer { 
+    /* height: 107px;
+    width: 100%; */
+    width: calc(100%-30px); 
+    height: calc(108px - 15px); 
+    padding: 15px; 
+    /* background: linear-gradient(360deg, var(--color-background-head-foot) 0%, #fffefd 100%);  */
+    background:var(--color-footer);
+    align-items: flex-end; 
+    display: flex; 
+    justify-content: space-between; 
+}
+
+ 
+.all-links-tg { 
+    display: flex; 
+    flex-direction: row; 
+    justify-content: flex-start; 
+ 
+} 
+ 
+.link-tg { 
+    text-decoration: none; 
+    display: flex; 
+    margin-right: 23px; 
+} 
+ 
+.logo-tg { 
+    width: 27px; 
+    margin-right: 3px; 
+} 
+ 
+.link-tg-text { 
+    font-family: var(--main-font); 
+    font-weight: bold; 
+    font-size: 12px; 
+    color: var(--color-text-head-foot); 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+} 
+ 
+.logo-footer { 
+    width: 60px; 
+    border-radius: 39px; 
+}
+
+
+/* адаптивная верстка */
+@media (max-width:1000px) {
+    .dish_name{
+        font-size: 4vw;
+        margin-bottom: 4vw;
+    }
+    header{
+        height: 10vw;
+        margin-bottom: 3vw;
+    }
+    .logo1{
+        height: 7vw;
+    }
+    .login_registration{
+        font-size: 2vw;
+        top: 4vw;
+    }
+    .logo-enter{
+        position: absolute;
+        height: 3vw;
+        width: 3vw;
+        top: 3.5vw;
+        right: 12vw;
+    }
+    /* table{
+        width: 10vw;
+    } */
+    /* .video_recipe{
+        width: 70vw;
+        height: 40vw;
+    } */
+    /* .instruction{
+    height: 80vw;
+    width: 80vw;
+    } */
+    /* .instruc{
+        font-size: 2vw;
+    }
+    .stages{
+        font-size: 0.97em;
+    } */
+
+    .link-tg-text { 
+        font-family: var(--main-font); 
+        font-weight: bold; 
+        font-size: 12px; 
+        color: var(--color-text-head-foot); 
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+    }  
+    .logo-footer { 
+        height: 7vw;
+        width: 7vw;
+        /* width: 60px;  */
+        /* border-radius: 39px;  */
+    }
+}
+    
+
+    @media (max-width:768px) {
+    .dish_name{
+        font-size: 4vw;
+        margin-bottom: 4vw;
+    }
+    header{
+        height: 10vw;
+        margin-bottom: 3vw;
+    }
+    .logo1{
+        height: 6vw;
+        top: 2vw;
+    }
+    .login_registration{
+        font-size: 2vw;
+        right: 3vw;
+        top: 3vw;
+    }
+    .logo-enter{
+        /* position: absolute; */
+        height: 2vw;
+        width: 2vw;
+        top: 3vw;
+        right: 10vw;
+    }
+    table{
+        width: 80vw;
+    }
+    .video_recipe{
+        width: 90vw;
+        height: 50vw;
+    }
+    .instruction{
+    height: 85vw;
+    width: 85vw;
+    margin: 5vw auto 0vw;
+
+    }
+    .instruc{
+        font-size: 0.98em;
+    }
+    .stages{
+        font-size: 0.98em;
+        
+    }
+    th{
+        font-size: 0.93em;
+    }
+    
+    td{
+        font-size: 0.9em;
+    }
+    .tag{
+        font-size: 3vw;
+    }
+    .tag-link{
+        font-size: 3vw;
+    }
+
+    footer { 
+        height: 10vw;
+       
+    }     
+   
+    .link-tg { 
+        margin-right: 0.7em; 
+    }     
+    .logo-tg { 
+        width: 0.8em; 
+
+    }     
+    .link-tg-text { 
+        font-size: 0.8em; 
+    }  
+    .logo-footer { 
+
+        height: 6vw;
+        width: 6vw;
+    }
+}
+
+
+@media (max-width:480px) {
+    .dish_name{
+        font-size: 4vw;
+    }
+    header{
+        height: 6vw;
+    }
+    .logo1{
+        top: 1vw;
+        height: 5vw;
+    }
+    .login_registration{
+        font-size: 2vw;
+        top: 2vw;
+    }
+    .logo-enter{
+        position: absolute;
+        height: 2vw;
+        width: 2vw;
+        top: 2vw;
+        right: 10vw;
+    }
+    table{
+        margin: 3vw auto 0;
+        width: 90vw;
+    }
+    .video_recipe{
+        width: 90vw;
+        height: 50vw;
+    }
+    .instruction{
+    height: 90vw;
+    width: 90vw;
+    }
+    
+    .instruc{
+        font-size: 3vw;
+        padding: 4vw;
+    }
+    .stages{
+        padding: 0 5vw 5vw 5vw;
+        font-size: 3vw;
+    }
+    th{
+        font-size: 2.5vw;
+    }   
+    td{
+        font-size: 2.5vw;
+    }
+    .tags{
+        margin: 1.5vw auto 0;
+    }
+    .tag{
+        font-size: 3vw;
+    }
+    .tag-link{
+        font-size: 3vw;
+    }
+
+    footer { 
+        /* height: 6vw; */
+        padding: 0.5em; 
+    }       
+    .link-tg { 
+        margin-right: 0.5em; 
+    }     
+    .logo-tg { 
+        width: 0.8em; 
+
+    }     
+    .link-tg-text { 
+        font-size: 0.4em; 
+    }  
+    .logo-footer { 
+
+        height: 6vw;
+        width: 6vw;
+    }
+}
+/* @media (max-width:400px) {
+
+    .logo-enter{
+        position: absolute;
+        height: 2vw;
+        width: 2vw;
+        top: 2vw;
+        right: 18vw;
+    }
+}
+@media (max-width:320px) {
+
+    .logo-enter{
+        position: absolute;
+        height: 2vw;
+        width: 2vw;
+        top: 2vw;
+        right: 19vw;
+    }
+} */
