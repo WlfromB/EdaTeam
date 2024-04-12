@@ -1,7 +1,5 @@
 import React from 'react';
 
-// import 'HTML/siginForm.js'; 
-// import 'HTML/UserPage.js';
 
 import 'HTML/css/bootstrap-reboot.min.css';
 import 'HTML/css/UserPage.css';
@@ -11,6 +9,10 @@ import { logo_tg, userpagelogo } from '../assets';
 import { userIcon } from '../assets';
 import { userHeart } from '../assets';
 import { logo_img } from '../assets';
+
+
+// import 'HTML/siginForm.js'; 
+// import 'HTML/UserPage.js';
 const UserPage = () => {
   return (
     <>
