@@ -10,7 +10,8 @@ import { userIcon } from '../assets';
 import { userHeart } from '../assets';
 import { logo_img } from '../assets';
 
-
+// import { scriptLogin } from '../assets';
+// import { scriptSignin } from '../assets';
 // import 'HTML/siginForm.js'; 
 // import 'HTML/UserPage.js';
 const UserPage = () => {
@@ -138,6 +139,7 @@ const UserPage = () => {
           <img className="logo-footer" src={logo_img} alt="Логотип сайта"/> 
         </a> 
       </footer>      
+
 </>
 
   );

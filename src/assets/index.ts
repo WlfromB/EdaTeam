@@ -20,3 +20,6 @@ export { default as vareniki } from './HomePage/recipes/vareniki.png';
 export {default as userpagelogo} from '/HTML//assets/FirstLogos/logoza 1.svg';
 export {default as userIcon} from '/HTML/assets/Icons/Аватарка профиля.svg';
 export {default as userHeart} from '/HTML/assets/Icons/heart-red-svgrepo-com.svg';
+
+// export {default as scriptLogin} from '/HTML/UserPage.js';
+// export {default as scriptSignin} from '/HTML/siginForm.js';

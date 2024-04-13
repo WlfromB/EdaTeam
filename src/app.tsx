@@ -6,7 +6,7 @@ import UserPage from './pages/UserPage';
 
 const App = () => {
   return (
-    <Recipe />
+    <UserPage />
   );
 };
 
