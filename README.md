@@ -1,5 +1,8 @@
 
 # Рецепты для студентов
+
+![Иллюстрация к проекту](https://mykaleidoscope.ru/x/uploads/posts/2022-09/1663755903_20-mykaleidoscope-ru-p-appetitnie-pelmeni-yeda-krasivo-23.jpg)
+
 + Главная страница (main) (Балабанова Надежда)
   + Поиск
   + Фильтры
