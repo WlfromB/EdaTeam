@@ -13,12 +13,12 @@
 html{
     font-size: 20px;
 }
-header {
+/* header {
     display: flex;
-    align-items: center; /* Выравнивание по вертикали */
+    align-items: center; /* Выравнивание по вертикали 
     background:linear-gradient(180deg, #fbd07e 0%, #fffefd 100%);
     font-family: var(--main-font);
-}
+} 
 header .slogan{    
     display:block;    
     margin-left: 0.5rem;
@@ -57,7 +57,7 @@ header .text-login-sigin{
     font-weight: 700;
     font-size: 1.25rem;
     color: var(--color-text-head-foot);
-}
+}*/
 main {
     background-image: url('/HTML/assets/Images/BackPage.jpg');
     font-family: var(--main-font);
@@ -70,7 +70,7 @@ main .section-main {
     padding-top: 5.6rem;
 }
 
-main .section-main .left-block{
+/* main .section-main .left-block{
     width: 34.25rem;
 }
 main .section-main .left-block .favorites-block{
@@ -90,20 +90,17 @@ main .section-main .left-block .favorites-block h2{
 main .section-main .left-block .favorites-block .orange-line{
     height: 0.15rem;
     background-color: var(--color-background-head-foot);
-    margin: -2.5rem auto;
-    min-width: 6.6rem;    
+    margin: 1.5rem auto 2.5rem;
+    width: 6.6rem;    
 }
-main .section-main .left-block .favorites-block .dishes{    
-    
-    display: flex;
-    flex-direction: column;
+main .section-main .left-block .favorites-block .dishes{  
     justify-content: space-between;
     height: 17.5rem;
 }
-
-main .section-main .left-block .favorites-block .dish p{   
-    margin-left: 3.85rem;
-    margin-right: 3.85rem;
+main .section-main .left-block .favorites-block .dish {
+    margin: 1.5rem 3.85rem;  
+}
+main .section-main .left-block .favorites-block .dish p{  
     display: inline-block;
     color: var(--color-text-main);
     font-weight: 700;
@@ -114,8 +111,6 @@ main .section-main .left-block .favorites-block .dish a{
     display: block;
     text-decoration: none;
     margin-top: 0.25rem;
-    margin-left: 3.85rem;
-    margin-right: 3.85rem;
     font-weight: 700;
     font-size: 0.75rem;
     color: var(--color-text-main);
@@ -123,8 +118,6 @@ main .section-main .left-block .favorites-block .dish a{
 main .section-main .left-block .favorites-block .dish .orange-line-dish{
     height: 0.1rem;
     margin-top: 0.25rem;
-    margin-left: 3.85rem;
-    margin-right: 3.85rem;
     background-color: var(--color-background-head-foot);
 }
 
@@ -147,7 +140,7 @@ main .section-main .left-block .add-recept-block a{
     color: var(--color-text-main);
     font-weight: 700;
        
-}
+} */
 
 main .section-main .right-block{
     height: 32.8rem;

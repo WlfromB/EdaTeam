@@ -1,0 +1,19 @@
+:root { 
+    --color-text-main: #711511; 
+    --color-text-head-foot: #EC3C52; 
+    --color-background-head-foot: #fbd07e; 
+    --color-back-card: #fdd8c3; 
+    --main-font: "Merriweather", "sans-serif"; 
+    --color-enter-form:#FDE3B2;
+}
+html{
+    font-size: 20px;
+}
+header {
+    display: flex;
+    align-items: center; /* Выравнивание по вертикали */
+    background:linear-gradient(180deg, #fbd07e 0%, #fffefd 100%);
+    font-family: var(--main-font);
+}
+
+

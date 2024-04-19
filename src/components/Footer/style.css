@@ -1,0 +1,43 @@
+footer { 
+    width: calc(100%-1.5rem); 
+    height: calc(108px - 0.75rem); 
+    padding: 0.75rem; 
+    background: #fde8c0;
+    align-items: flex-end; 
+    display: flex; 
+    justify-content: space-between; 
+    font-family: var(--main-font);
+}
+
+.all-links-tg { 
+    display: flex; 
+    flex-direction: row; 
+    justify-content: flex-start; 
+ 
+} 
+ 
+.link-tg { 
+    text-decoration: none; 
+    display: flex; 
+    margin-right: 1.15rem; 
+} 
+ 
+.logo-tg { 
+    width: 1.35rem; 
+    margin-right: 0.15rem; 
+} 
+ 
+.link-tg-text { 
+    
+    font-weight: bold; 
+    font-size: 0.6rem; 
+    color: var(--color-text-head-foot); 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+} 
+ 
+.logo-footer { 
+    width: 3rem; 
+    border-radius: 2rem; 
+}

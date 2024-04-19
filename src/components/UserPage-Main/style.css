@@ -1,0 +1,11 @@
+main {
+    background-image: url('/HTML/assets/Images/BackPage.jpg');
+    font-family: var(--main-font);
+}
+main .section-main {
+    display: flex;
+    justify-content: space-between;
+    margin: 0rem 10rem;
+    min-height: 40rem;
+    padding-top: 5.6rem;
+}

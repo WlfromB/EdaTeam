@@ -6,8 +6,3 @@ declare module '*.png' {
     let path: string;
     export default path;
 }
-
-// declare module '*.js'{
-//     let path: string;
-//     export default path;
-// }

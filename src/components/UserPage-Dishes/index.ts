@@ -1,0 +1,1 @@
+export { UserPageDishes } from "./UserPage-Dishes";
