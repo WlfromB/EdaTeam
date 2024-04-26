@@ -1,0 +1,1 @@
+export {TableFoot} from "./table-foot"
