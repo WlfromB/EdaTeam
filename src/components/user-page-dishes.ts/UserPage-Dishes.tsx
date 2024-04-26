@@ -1,6 +1,8 @@
 import React from "react";
+
 import { UserPageDish } from "../user-page-dish/UserPage-Dish";
-import './style.css';
+import { StyledDishes, StyledHeaderDishes } from "./user-page-dishes.styled";
+//import './style.css';
 
 const dishesData = [
     {name:"Блюдо",href:"#01",title:"Ссылка"},
@@ -10,11 +12,11 @@ const dishesData = [
 ];
 
 export const UserPageDishes = (props)=>{
-    return <div className="dishes">                    
-    <h2>                        
+    return <StyledDishes className="dishes">                    
+    <StyledHeaderDishes>                        
         История
-    </h2>
-    <div className="orange-line"></div>
+    </StyledHeaderDishes>
+    <StyledDishes className="orange-line"></StyledDishes>
     <ul>
     {dishesData.map((element, index)=>
         (
@@ -23,5 +25,5 @@ export const UserPageDishes = (props)=>{
             </li>
         ))}
     </ul>
-    </div>  
+    </StyledDishes>  
 }

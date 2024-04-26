@@ -5,7 +5,7 @@ export const StyledBlock = styled.div`
     ${(props)=>{
         if(props.className == "dish"){
             return css`
-                margin: 0rem 3.85rem;
+                margin: 0rem 3.85rem 1rem;
             `;
         }
     }}
@@ -14,7 +14,7 @@ export const StyledBlock = styled.div`
         if(props.className == "orange-line-dish"){
             return css`
                 height: 0.1rem;
-                margin-top: 0.25rem;
+                margin: 0.25rem 0rem 0.6rem;
                 background-color: var(--color-background-head-foot);
             `;
         }

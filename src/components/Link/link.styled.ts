@@ -30,10 +30,46 @@ export const StyledLink = styled.a<{
             return css`
                 display: block;
                 text-decoration: none;
-                margin-top: -0.4rem;
+                margin-top: 0.2rem;
                 font-weight: 700;
                 font-size: 0.75rem;
                 color: var(--color-text-main);
+            `;
+        }
+    }}
+
+    ${(props)=>{
+        if(props.className == "add-recept-a"){
+            return css`
+                margin: auto;
+                font-size: 1.25rem;
+                text-decoration: none;
+                text-align: center;
+                color: var(--color-text-main);
+                font-weight: 700;
+            `;
+        }
+    }}
+    ${(props)=>{
+        if(props.className == "signin-link"){
+            return css`
+                margin: -1.5rem auto 0rem;
+                color:var(--color-text-head-foot);
+                font-size: 0.75rem;
+            `;
+        }
+    }}
+    
+    ${(props)=>{
+        if(props.className == "right-block-a"){
+            return css`
+                display: block;
+                text-decoration: none;
+                text-align: center;
+                color: var(--color-text-main);
+                font-weight: 700;
+                
+                visibility: collapse;
             `;
         }
     }}
