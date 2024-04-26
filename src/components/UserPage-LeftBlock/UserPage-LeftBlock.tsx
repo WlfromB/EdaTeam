@@ -1,6 +1,6 @@
 import React from "react";
 import { UserPageDishes } from "../UserPage-Dishes/UserPage-Dishes";
-import { Link } from "../Link";
+import { Link } from "../link";
 import './style.css';
 export const UserPageLeftBlock = (props)=>{
     return <div className="left-block">                

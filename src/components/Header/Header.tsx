@@ -1,14 +1,15 @@
 import React from "react";
 
-import './style.css';
+//import './style.css';
 
-import { Slogan } from "../SloganBlock";
-import { LoginSignin } from "../LoginSignin/LoginSignin";
-import { ImageLogo } from "../ImageLogo";
+import { Slogan } from "../slogan-block";
+import { LoginSignin } from "../login-signin/LoginSignin";
+import { ImageLogo } from "../image-logo";
+import { StyledHeader } from "./header.styled";
 export const Header = (props)=>{
-    return <header>
+    return <StyledHeader>
     <ImageLogo/> 
     <Slogan/>
     <LoginSignin/>
-</header>
+</StyledHeader>
 }

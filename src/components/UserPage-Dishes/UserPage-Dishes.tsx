@@ -1,5 +1,5 @@
 import React from "react";
-import { UserPageDish } from "../UserPage-Dish/UserPage-Dish";
+import { UserPageDish } from "../user-page-dish/UserPage-Dish";
 import './style.css';
 
 const dishesData = [

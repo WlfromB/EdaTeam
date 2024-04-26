@@ -2,7 +2,7 @@ import React from "react";
 
 import "./style.css";
 import { userIcon, userHeart } from "../../assets";
-import { Link } from "../Link";
+import { Link } from "../link";
 export const UserPageRightBlock = (props)=>{
     return <div className="right-block">
     <img src={userIcon} alt="Аватарка профиля" className="image-profile"/>
