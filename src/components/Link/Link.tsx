@@ -1,11 +1,11 @@
 import React from "react";
 
-import './style.css';
-
+//import './style.css';
+import { StyledLink } from "./link.styled";
 export const Link = (props) => {
     return (
-        <a className={props.ClassName} href={props.Href}>
+        <StyledLink className={props.ClassName} bottom = {props?.bottom} href={props.Href}>
             {props.children}
-        </a>
+        </StyledLink>
     );
 };

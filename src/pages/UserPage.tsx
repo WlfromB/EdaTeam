@@ -1,19 +1,18 @@
 import React from 'react';
 
 
-import 'HTML/css/bootstrap-reboot.min.css';
-import 'HTML/css/UserPage.css';
-import 'HTML/css/mediaUserPage.css';
+import './reboot.css';
+import './user-page.css';
+//import 'HTML/css/mediaUserPage.css';
 
-import { Header } from '../components/Header';
-import {Footer} from '../components/Footer';
-import { UserPageMain } from '../components/UserPage-Main';
+
+import { Header } from '../components/header';
+import { UserPageMain } from '../components/user-page-main';
 const UserPage = () => {
   return (
     <>
     <Header/>    
-    <UserPageMain/>
-    <Footer/>    
+    <UserPageMain/>     
 </>
 
   );
