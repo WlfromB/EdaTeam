@@ -1,0 +1,1 @@
+export { NavLink } from './nav-page-link';
