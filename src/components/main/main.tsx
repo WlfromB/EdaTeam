@@ -4,7 +4,7 @@ import { DishName } from "../dish-name";
 import { VideoRecipe } from "../video-recipe";
 import { Tags } from "../tags";
 import { Table } from "../table";
-import { Instruction } from "../Instruction";
+import { Instruction } from "../instruction";
 import { StyledMain } from "./main.styled";
 
 export const Main = (props)=>{
