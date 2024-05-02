@@ -15,7 +15,6 @@ export const StyledFooter = styled.footer`
   
 
 @media (max-width:768px) {
-
         height: 10vw;
 }
 

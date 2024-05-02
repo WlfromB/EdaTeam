@@ -1,26 +1,8 @@
-import styled from "@emotion/styled"
-import { css } from '@emotion/react'
+import styled from "@emotion/styled";
+import { css } from "@emotion/react";
 
-export const StyledLogoImage = styled.img`
-    height: 306; /* Высота логотипа */
-    max-width: 83;
-    position: absolute;
-    top: 12px;
-    left: 18px;
-    
-/* адаптивная верстка */
-@media (max-width:1000px) {
-        height: 7vw;
-}
-    
-@media (max-width:768px) {
-        height: 6vw;
-        top: 2vw;
-}
-
-@media (max-width:480px) {
-        top: 1vw;
-        height: 5vw;
-}
-    
-`;
+export const StyledImageLogo = styled.img`
+    display: block;
+    margin: 0.6rem 0rem  0.6rem 0.9rem;
+    width: 4.2rem;
+`
