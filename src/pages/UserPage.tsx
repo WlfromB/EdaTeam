@@ -6,7 +6,7 @@ import './user-page.css';
 //import 'HTML/css/mediaUserPage.css';
 
 
-import { Header } from '../components/header';
+import { Header } from '../components/Header';
 import { UserPageMain } from '../components/user-page-main';
 const UserPage = () => {
   return (
