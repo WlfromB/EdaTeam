@@ -2,9 +2,9 @@ import React from "react";
 
 import { Wrapper } from "./main.style";
 
-import { Filters } from '../filters';
-import { Recipes } from '../recipes';
-import { NavPage } from '../nav-page';
+import { Filters } from '../home-page-filters';
+import { Recipes } from '../home-page-recipes';
+import { NavPage } from '../home-page-nav-page';
 
 export function HomePageMain() {
     return (
