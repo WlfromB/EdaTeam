@@ -8,12 +8,15 @@ import './user-page.css';
 
 import { Header } from '../components/Header';
 import { UserPageMain } from '../components/user-page-main';
+import { Footer } from '../components/footer';
+
 const UserPage = () => {
   return (
     <>
-    <Header/>    
-    <UserPageMain/>     
-</>
+      <Header />
+      <UserPageMain />
+      <Footer />
+    </>
 
   );
 };

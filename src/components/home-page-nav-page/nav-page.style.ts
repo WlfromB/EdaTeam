@@ -11,10 +11,10 @@ export const StyledNav = styled.nav`
     }
     @media screen and (max-width: 960px) {
     .nav-list {
-        margin-bottom: 0px;
+        margin-bottom: 6px;
     }}
     @media screen and (max-width: 540px) {
     .nav-list {
-        margin-bottom: 0px;
+        margin-bottom: 6px;
     }}
     `;

@@ -4,7 +4,7 @@ import { RootColors } from "../../assets/colors/root-colors";
 
 export const StyledFooter = styled.footer`
     ${RootColors};
-    width: calc(100% - 30px); 
+    width: 100%; 
     height: calc(108px - 15px); 
     padding: 15px; 
     /* background: linear-gradient(360deg, var(--color-background-head-foot) 0%, #fffefd 100%);  */
