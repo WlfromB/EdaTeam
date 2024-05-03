@@ -1,0 +1,1 @@
+export {FooterLogoLink} from "./footer-logo-link"
