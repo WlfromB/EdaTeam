@@ -2,7 +2,6 @@ import React from 'react';
 
 
 import './reboot.css';
-import './user-page.css';
 //import 'HTML/css/mediaUserPage.css';
 
 
