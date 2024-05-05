@@ -1,7 +1,9 @@
 import styled from "@emotion/styled";
 import { css } from "@emotion/react";
+import {Link as ConnectedLink} from 'react-router-dom';
 
-export const StyledLink = styled.a<{
+
+export const StyledLink = styled(ConnectedLink)<{
     bottom?:boolean;
     className: string;
 }>`
@@ -73,4 +75,30 @@ export const StyledLink = styled.a<{
             `;
         }
     }}
+
+
+    ${(props) =>{
+        if(props.className == "name-recipe"){
+            return css`
+            font-family: var(--main-font);
+        font-style: italic;
+        font-weight: 900;
+        font-size: 14px;
+        text-decoration: underline;
+        text-decoration-skip-ink: none;
+        color: var(--color-text-main);
+        text-align: left;
+        
+        @media screen and (max-width:960px){
+            font-size:16px
+        }
+        @media screen and (max-width:540px){
+            font-size: 3.2vw;
+            text-align: center;
+        }
+        `
+        }
+    }
+
+    }
 `;

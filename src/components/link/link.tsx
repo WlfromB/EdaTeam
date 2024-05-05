@@ -4,7 +4,7 @@ import React from "react";
 import { StyledLink } from "./link.styled";
 export const Link = (props) => {
     return (
-        <StyledLink className={props.ClassName} bottom = {props?.bottom} href={props.Href}>
+        <StyledLink className={props.ClassName} bottom = {props?.bottom} to={props.Href} >
             {props.children}
         </StyledLink>
     );
