@@ -6,6 +6,12 @@ export const StyledLeftBlockes = styled.div`
         if(props.className == "left-block"){
             return css`
                 width: 34.25rem;
+
+                @media screen and (max-width: 768px){
+                    width: 21.6rem;
+                    height: 10rem;
+                    margin: 0 auto
+                }
             `;
         }
     }}
@@ -31,6 +37,10 @@ export const StyledLeftBlockes = styled.div`
                 height: 5.8rem;
                 margin-top: 3.5rem;
                 justify-content: center;
+
+                @media screen and (max-width: 768px ){
+                    margin-top: 2rem;
+                }
             `;
         }
     }}

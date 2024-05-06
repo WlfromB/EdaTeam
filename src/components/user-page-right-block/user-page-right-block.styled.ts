@@ -8,6 +8,10 @@ export const StyledRightBlock = styled.div`
     width: 22rem;
     margin: 0 0 0 9rem;
     box-shadow: 0 0 0.5rem 0 rgba(0, 0, 0, 0.5), 0 0 1rem 0 rgba(0, 0, 0, 0.3), 0 0 0.25rem 0 rgba(0, 0, 0, 0.1);
+
+    @media screen and (max-width: 768px){
+        display: none;
+    }
 `
 
 export const StyledRightBlockImage = styled.img`
