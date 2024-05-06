@@ -1,5 +1,8 @@
 import React, { Component, ReactNode } from 'react';
 
+import { DivError, HeaderError, ParagraphError } from './error-boundary.styled';
+
+
 interface ErrorBoundaryProps {
   children: ReactNode;
 }
@@ -11,7 +14,7 @@ interface ErrorBoundaryState {
 class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
   constructor(props: ErrorBoundaryProps) {
     super(props);
-    this.state = { hasError: false };
+    this.state = { hasError: true };
     
   }
 
@@ -26,7 +29,18 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
 
   render(): React.ReactNode {
     if (this.state.hasError) {
-      return <h1>Something went wrong</h1>;
+      return <DivError className="back">
+        {/* <img src={backgroundErrorBoundary}/> */}
+      <DivError>
+        <HeaderError> 
+          Упсс.. Что-то пошло не так :( 
+        </HeaderError>
+        <ParagraphError > 
+          Пожалуйста, подождите немного, мы всё починим!
+        </ParagraphError>
+      </DivError>
+      </DivError>
+      
     }
     return this.props.children;
   }
