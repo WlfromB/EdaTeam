@@ -58,6 +58,10 @@ export const StyledLink = styled(ConnectedLink)<{
                 margin: -1.5rem auto 0rem;
                 color:var(--color-text-head-foot);
                 font-size: 0.75rem;
+
+                @media screen and (max-width: 768px){
+                    margin: 0.4rem auto;
+                }
             `;
         }
     }}

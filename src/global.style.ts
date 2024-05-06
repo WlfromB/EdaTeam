@@ -20,5 +20,11 @@ export const globalStyles = css`
 
     html {
         font-size: 20px;
+    
+    @media screen and (max-width: 768px ){
+        html{
+        font-size: 3.7vw;
+    }
+    }
 }
 `

@@ -17,6 +17,10 @@ export const StyledDishes = styled.div`
                 background-color: var(--color-background-head-foot);
                 margin: 1.5rem auto;
                 width: 6.6rem; 
+
+                @media screen and (max-width: ){
+                    margin: -2.5rem 7.5rem 0 7.5rem;
+                }
             `;
         }
     }}

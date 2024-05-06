@@ -30,6 +30,12 @@ export const StyledSigninDivs = styled.div`
                     height: 28rem;
                     box-shadow: -1px -1px 4px 0 rgba(0, 0, 0, 0.25), 0 4px 4px 0 rgba(0, 0, 0, 0.25);  
                     transition: transform 0.5s ease;
+
+
+                    @media screen and (max-width: 768px){
+                        width: 23.7rem;
+                        height: 21.5rem;
+                    }
             `;
         }
     }};
@@ -58,6 +64,13 @@ export const StyledSigninHeader = styled.h2`
       font-family: var(--main-font);
       color:var(--color-text-main);
       font-weight: 500; 
+
+
+      @media screen and (max-width: 768px){
+        margin: 0 3.4rem 0.5rem 3.4rem;
+        padding: 0.4rem 0.05rem;
+        font-size: 1.5rem;
+      }
 `
 
 export const StyledSigninForm = styled.form`
@@ -74,6 +87,10 @@ export const StyledSigninInput = styled.input`
     border:none;
     padding: 0.5rem;
     background-color: var(--color-enter-form);
+
+    @media screen and (max-width: 768px){
+        margin: 0 1.4rem 1.5rem;
+    }
 `
 
 export const StyledSigninButton = styled.button`
@@ -87,4 +104,13 @@ export const StyledSigninButton = styled.button`
     font-family: var(--main-font);
     color:var(--color-text-main);   
     font-weight: 500;
+
+
+    @media screen and (max-width: 768px){
+        font-size: 0.9rem;
+        font-weight: 600;
+        border-radius: 0.4rem;
+        padding: 0;
+        margin: 0 3.2rem 0rem 3.2rem;
+    }
 `

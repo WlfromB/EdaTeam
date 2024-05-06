@@ -13,4 +13,10 @@ export const StyledSection = styled.section`
     margin: 0rem 10rem;
     min-height: 40rem;
     padding-top: 5.6rem;
+
+    @media screen and (max-width: 768px ){
+        padding-top:0.5rem;
+        margin: 2.4rem;
+        min-height: 33rem;
+    }
 `
