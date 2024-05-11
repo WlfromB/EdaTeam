@@ -1,21 +1,25 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import {Tag} from "../rp-tag";
 import { TagName } from "../rp-tag-name";
 
 import { StyledTags } from "./tags.styled";
 
-const tagList=[
-    { name: "#блины", href: "#01" },
-    { name: "#вишня", href: "#02" },
-    { name: "#молоко", href: "#03" }
-];
 
 export const Tags = (props)=>{
+    const [data, setData] = useState([])
+    useEffect(() => {
+    fetch('/api/recipe-data')
+    .then(response => response.json())
+    .then(data => {
+      setData(data.tags)
+    })
+  }, [])
+
     return( 
     <StyledTags className="tags"> 
         <Tag/>
-        {tagList.map((element, index) => (
+        {data.map((element, index) => (
                 <TagName key={index} href={element.href} name={element.name} />
             ))}        
     </StyledTags>

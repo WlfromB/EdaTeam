@@ -16,6 +16,8 @@ export const globalStyles = css`
         --color-back-card: #fdd8c3;
         --main-font: "Merriweather", "sans-serif";
         --color-enter-form: #FDE3B2;
+        --color-border-cells: #5B5B5B;
+        --color-footer: #fde8c0;
     }
 
     html {
