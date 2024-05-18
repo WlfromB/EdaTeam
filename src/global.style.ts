@@ -18,6 +18,8 @@ export const globalStyles = css`
         --color-enter-form: #FDE3B2;
         --color-border-cells: #5B5B5B;
         --color-footer: #fde8c0;
+        --color-switch-button:#f5c05c;
+        --color-switch-button-hover:#ffb300;
     }
     html, body, div, span, applet, object, iframe,
     h1, h2, h3, h4, h5, h6, p, blockquote, pre,
