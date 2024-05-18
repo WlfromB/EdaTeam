@@ -1,1 +1,1 @@
-export { UserPageLeftBlock } from "./UserPage-LeftBlock";
+export { UserPageLeftBlock } from "./user-page-left-block";

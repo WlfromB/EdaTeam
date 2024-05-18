@@ -33,7 +33,7 @@ export const UserPageDishes = (props)=>{
     {data.map((element, index)=>
         (
             <li key={index}>
-                <UserPageDish name={element.dishname} href={element.dishlink} title={element.dishname}/>
+                <UserPageDish name={element.dishname} href={`${URLs.ui.recipe.url}${element.dishlink}`} title={element.dishname}/>
             </li>
         ))}
     </ul>

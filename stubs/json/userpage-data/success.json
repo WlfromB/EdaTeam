@@ -6,23 +6,23 @@
         "favoritedishes":
             [
         {"id":1,
-        "dishlink":"/dish1",
+        "dishlink":"?=dish1",
         "dishname":"Блюдо1"
         },
         {"id":2,
-        "dishlink":"/dish2",
+        "dishlink":"?=dish2",
         "dishname":"Блюдо2"
         },
         {"id":3,
-        "dishlink":"/dish3",
+        "dishlink":"?=dish3",
         "dishname":"Блюдо3"
         },
         {"id":4,
-        "dishlink":"/dish4",
+        "dishlink":"?=dish4",
         "dishname":"Блюдо4"
         },
         {"id":5,
-        "dishlink":"/dish5",
+        "dishlink":"?=dish5",
         "dishname":"Блюдо5"
         }
     ]        

@@ -10,8 +10,8 @@ module.exports = {
   /* use https://kc.admin.inno-js.ru/ to create config, navigations and features */
   navigations: {
     'edateam.main': '/edateam',
-    'edateam.recipe': '/recipe/:/recipeId',
-    'edateam.user': '/user/:/userId'
+    'edateam.recipe': '/recipe/recipeId',
+    'edateam.user': '/user/userId'
   },
   features: {
     'edateam': {
