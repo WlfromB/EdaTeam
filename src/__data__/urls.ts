@@ -1,4 +1,4 @@
-import { getNavigationsValue } from "@ijl/cli";
+import { getConfigValue, getNavigationsValue } from "@ijl/cli";
 import { generatePath } from "react-router-dom";
 
 const baseUrl = getNavigationsValue('edateam.main');
@@ -19,5 +19,7 @@ export const URLs = {
             getUrl:(userId:number)=>generatePath(`${baseUrl}${getNavigationsValue('edateam.user')}, {userId}`)
         }
     },
-    api:{},
+    api:{
+        main:getConfigValue('edateam.api')
+    },
 }

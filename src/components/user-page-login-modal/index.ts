@@ -1,1 +1,1 @@
-export { UserPageLoginModal } from "./UserPage-LoginModal";
+export { UserPageLoginModal } from './user-page-login-modal';

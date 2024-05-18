@@ -1,5 +1,5 @@
 import React from "react";
-import { UserPageDishes } from "../user-page-dishes.ts/UserPage-Dishes";
+import { UserPageDishes } from "../user-page-dishes.ts/user-page-dishes";
 import { Link } from "../link";
 import {StyledLeftBlockes} from "./user-page-left-block.styled";
 //import './style.css';

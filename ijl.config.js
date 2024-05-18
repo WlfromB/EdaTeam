@@ -19,6 +19,6 @@ module.exports = {
     },
   },
   config: {
-    key: 'value'
+    'edateam.api': '/api'
   }
 }

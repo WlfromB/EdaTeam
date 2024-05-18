@@ -1,1 +1,1 @@
-export { UserPageDish } from "./UserPage-Dish";
+export { UserPageDish } from "./user-page-dish";

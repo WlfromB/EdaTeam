@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
-import { UserPageDish } from "../user-page-dish/UserPage-Dish";
+import { UserPageDish } from "../user-page-dish/user-page-dish";
 import { StyledDishes, StyledHeaderDishes } from "./user-page-dishes.styled";
+import { URLs } from "../../__data__/urls";
 //import './style.css';
 
 const dishesData = [
@@ -11,19 +12,31 @@ const dishesData = [
     {name:"Блюдо",href:"#04",title:"Ссылка"}
 ];
 
+
+
 export const UserPageDishes = (props)=>{
+
+    const [data, setData] = useState([])
+    useEffect(() => {
+    fetch(`${URLs.api.main}/userpage-data`)
+    .then(response => response.json())
+    .then(data => {
+      setData(data.data.favoritedishes)
+    })
+  }, [])
     return <StyledDishes className="dishes">                    
     <StyledHeaderDishes>                        
         История
     </StyledHeaderDishes>
     <StyledDishes className="orange-line"></StyledDishes>
-    <ul>
-    {dishesData.map((element, index)=>
+    <ul>    
+    {data.map((element, index)=>
         (
-            <li key={element.href}>
-                <UserPageDish name={element.name} href={element.href} title={element.title}/>
+            <li key={index}>
+                <UserPageDish name={element.dishname} href={element.dishlink} title={element.dishname}/>
             </li>
         ))}
     </ul>
+
     </StyledDishes>  
 }

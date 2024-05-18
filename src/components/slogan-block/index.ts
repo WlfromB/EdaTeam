@@ -1,1 +1,1 @@
-export {Slogan} from './Slogan';
+export {Slogan} from './slogan';
