@@ -8,4 +8,8 @@ router.get('/userpage-data', (req, res)=>{
   res.send(require('../json/userpage-data/success.json'))
 })
 
+router.get('/homepage-data', (req, res)=>{
+  res.send(require('../json/homepage-data/success.json'))
+})
+
 module.exports = router;
