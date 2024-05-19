@@ -8,7 +8,7 @@ import { StyledSigninButton,
         StyledSigninInput,
         StyledSigninSpan
 } from "./user-page-signin-modal.styled";
-export const UserPageSigninModal = (props)=>
+export const UserPageSigninModal = ()=>
     {
         return <StyledSigninDivs id="signinModal" className="signin-modal">
         <StyledSigninDivs className="signin-modal-content">

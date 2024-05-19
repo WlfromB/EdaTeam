@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
 
-// import './style.css';
 import { StyledDishName } from "./dish-name.styled";
 
-export const DishName = (props)=>{
+export const DishName = ()=>{
     const [data, setData] = useState([])
     useEffect(() => {
     fetch('/api/recipe-data')

@@ -1,14 +1,15 @@
 import React from "react";
 
-import { FooterLink } from "../footer-link/footer-link";
 import { logo_img } from "../../assets";
 
 import { StyledFooterLogo } from "./footer-logo-link.styled";
+import { Link } from '../link'
+import { URLs } from "../../__data__/urls";
 
-export const FooterLogoLink = (props) => {
+export const FooterLogoLink = () => {
     return (
-    <a href="#"> 
+    <Link Href={`${URLs.baseUrl}`} ClassName={""} bottom="false" > 
         <StyledFooterLogo className="logo-footer" src={logo_img} alt="Логотип сайта: вилка и нож"/> 
-    </a> 
+    </Link> 
     );
 };

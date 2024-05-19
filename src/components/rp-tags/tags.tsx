@@ -6,7 +6,7 @@ import { TagName } from "../rp-tag-name";
 import { StyledTags } from "./tags.styled";
 
 
-export const Tags = (props)=>{
+export const Tags = ()=>{
     const [data, setData] = useState([])
     useEffect(() => {
     fetch('/api/recipe-data')

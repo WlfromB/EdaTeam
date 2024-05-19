@@ -15,7 +15,7 @@ const links=[
     "https://t.me/nadenka_b"
 ]
 
-export const FooterLinks = (props) => {
+export const FooterLinks = () => {
     return (
       <StyledAllFooterLinks className="all-links-tg">
         {names.map((name, index) => (

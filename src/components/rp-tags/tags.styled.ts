@@ -1,5 +1,4 @@
 import styled from "@emotion/styled"
-import { css } from '@emotion/react'
 
 export const StyledTags = styled.div`
     text-align: center;

@@ -1,5 +1,5 @@
 import styled from "@emotion/styled"
-import { css } from '@emotion/react'
+
 import { RootColors } from "../../assets/colors/root-colors";
 
 export const StyledDishName = styled.h1`

@@ -5,7 +5,7 @@ import { TableBody } from "../rp-table-body";
 import { TableFoot } from "../rp-table-foot";
 import { StyledTable } from "./table.styled";
 
-export const Table = (props)=>{
+export const Table = ()=>{
     return( 
         <StyledTable>
             <TableHead/>

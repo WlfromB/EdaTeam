@@ -4,7 +4,7 @@ import { UserPageDish } from "../user-page-dish/user-page-dish";
 import { StyledButton, StyledDishes, StyledHeaderDishes } from "./user-page-dishes.styled";
 import { URLs } from "../../__data__/urls";
 
-export const UserPageDishes = (props)=>{
+export const UserPageDishes = ()=>{
 
     const [data, setData] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
@@ -35,7 +35,8 @@ export const UserPageDishes = (props)=>{
             setCurrentPage(currentPage + 1);
         }
     };
-    return <><StyledDishes className="dishes">                    
+    return <>
+    <StyledDishes className="dishes">                    
     <StyledHeaderDishes>                        
         История
     </StyledHeaderDishes>
@@ -52,13 +53,13 @@ export const UserPageDishes = (props)=>{
     </StyledDishes>  
     <StyledDishes className="obertka">
     <StyledDishes className="pagination">
-                <StyledButton onClick={handlePreviousPage} disabled={currentPage === 1}>
-                    Previous
-                </StyledButton>
-                <StyledButton onClick={handleNextPage} disabled={currentPage === totalPages}>
-                    Next
-                </StyledButton>
-            </StyledDishes>
-            </StyledDishes>
-            </>
+        <StyledButton onClick={handlePreviousPage} disabled={currentPage === 1}>
+            Previous
+        </StyledButton>
+        <StyledButton onClick={handleNextPage} disabled={currentPage === totalPages}>
+            Next
+        </StyledButton>
+    </StyledDishes>
+    </StyledDishes>
+    </>
 }

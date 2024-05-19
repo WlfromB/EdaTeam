@@ -3,7 +3,8 @@ import React from "react";
 import { Wrapper } from "./card-recipe.style";
 import { Link } from "../link";
 
-export const CardRecipe = (props) => {
+
+export const CardRecipe = (props: any) => {
     return (
         <Wrapper>
             <img className="img-recipe" src={props.srcImg}

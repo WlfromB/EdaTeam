@@ -1,7 +1,4 @@
 import styled from "@emotion/styled";
-import { css } from "@emotion/react";
-
-import {backgroundMain} from './index';
 
 export const StyledMain = styled.main`
 background-image: url({backgroundMain});

@@ -7,7 +7,7 @@ import { Table } from "../rp-table";
 import { Instruction } from "../rp-Instruction";
 import { StyledMain } from "./main.styled";
 
-export const Main = (props)=>{
+export const Main = ()=>{
     return( 
         <StyledMain className="content" >      
             <DishName/>      

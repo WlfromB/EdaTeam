@@ -8,12 +8,12 @@ import { StyledRightBlock,
     StyledRightBlockParagraph
 
  } from "./user-page-right-block.styled";
-export const UserPageRightBlock = (props)=>{
+export const UserPageRightBlock = (props: any)=>{
     return <StyledRightBlock>
     <StyledRightBlockImage src={userIcon} alt="Аватарка профиля" className="image-profile"/>
     <StyledRightBlockParagraph>{props.loginUser}</StyledRightBlockParagraph>
     <StyledRightBlockParagraph>{props.dateCreated}</StyledRightBlockParagraph>
     <StyledRightBlockImage src={userHeart} alt="Переключатель на избранное: сердечко" className="image-favotites"/>
-    <Link ClassName="right-block-a" Href="#">История</Link>
+    <Link ClassName="right-block-a" >История</Link>
 </StyledRightBlock>
 }

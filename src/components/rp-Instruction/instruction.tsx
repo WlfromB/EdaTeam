@@ -5,7 +5,7 @@ import { TitleInstruction } from "../rp-title-instruction";
 
 import { StyledInstruction } from "./instruction.styled";
 
-export const Instruction = (props)=>{
+export const Instruction = (_props: any)=>{
     return   (
     <StyledInstruction className="instruction"> 
         <TitleInstruction/>

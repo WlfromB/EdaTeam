@@ -5,7 +5,7 @@ import { Link } from "../link";
 import { StyledSlogan } from "./slogan.styled";
 import { URLs } from "../../__data__/urls";
 
-export const Slogan = (props)=>{
+export const Slogan = ()=>{
     return <StyledSlogan>
     <Link ClassName="text-slogan" Href={URLs.baseUrl}>
         ГотовимЛегко                

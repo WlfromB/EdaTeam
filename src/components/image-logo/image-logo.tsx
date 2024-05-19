@@ -2,8 +2,8 @@ import React from "react";
 
 import { userpagelogo } from "./index";
 import { StyledImageLogo } from "./image-logo.styled";
-//import './style.css';
-export const ImageLogo = (props)=>{
+
+export const ImageLogo = ()=>{
     return <StyledImageLogo 
     src={userpagelogo}        
     alt="Логотип фирмы: вилка и нож"

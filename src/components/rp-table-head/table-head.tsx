@@ -3,7 +3,7 @@ import React from "react";
 import { StyledTableHeadRow } from "./table-head.styled";
 import { StyledTableHead } from "./table-head.styled";
 
-export const TableHead = (props)=>{
+export const TableHead = ()=>{
     return( 
     <StyledTableHead>
         <tr>

@@ -21,3 +21,4 @@ export const mount = (Сomponent, element = document.getElementById('app')) => {
 export const unmount = () => {
   rootElement.unmount();
 };
+  

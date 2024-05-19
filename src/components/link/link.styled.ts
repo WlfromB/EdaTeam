@@ -4,14 +4,14 @@ import {Link as ConnectedLink} from 'react-router-dom';
 
 
 export const StyledLink = styled(ConnectedLink)<{
-    bottom?:boolean;
+    bottom?:string;
     className: string;
-}>`
+    }>`
     display: block;
     text-decoration: none;
     color: var(--color-text-head-foot);
     font-weight: 700;
-    font-size:${(props:any)=>!props.bottom ? "1.25rem" : "1.1rem"};
+    font-size:${(props:any)=>!(props.bottom == "true") ? "1.25rem" : "1.1rem"};
     text-align: left;
     line-height: 1.15;
 
@@ -102,7 +102,16 @@ export const StyledLink = styled(ConnectedLink)<{
         }
         `
         }
+    }}
+    ${(props) =>{
+        if(props.className == " "){
+            return css`            
+        `
+        }
     }
-
     }
 `;
+
+function stringToBoolean(bottom: any) {
+    throw new Error("Function not implemented.");
+}

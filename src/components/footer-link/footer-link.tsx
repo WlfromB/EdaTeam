@@ -7,7 +7,7 @@ import { logo_tg } from "../../assets";
 import { StyledFooterLink } from "./footer-link.styled";
 
 
-export const FooterLink = (props)=>{
+export const FooterLink = (props:any)=>{
     const isExternal = useMemo(()=> props.href?.startsWith('http'), [props.href])
     const linkProps: any = {}
     if (isExternal) {

@@ -7,8 +7,8 @@ import { StyledMain,
     StyledSection
  } from "./user-page-main.styled";
 import { URLs } from "../../__data__/urls";
-//import './style.css';
-export const UserPageMain = (props)=>
+
+export const UserPageMain = ()=>
     {
         const [login, setLogin] = useState([])
         useEffect(()=>{

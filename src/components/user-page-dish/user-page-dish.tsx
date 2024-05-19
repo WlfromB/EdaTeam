@@ -1,8 +1,9 @@
 import React from "react";
+
 import { Link } from "../link";
-//import './style.css';
 import { StyledParagraph, StyledBlock } from "./user-page-dish.styled";
-export const UserPageDish = (props)=>{
+
+export const UserPageDish = (props: any)=>{
     return <StyledBlock className="dish">
     <StyledParagraph>
         {props.name}

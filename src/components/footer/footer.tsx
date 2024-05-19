@@ -5,7 +5,7 @@ import { FooterLogoLink } from "../footer-logo-link";
 
 import { StyledFooter } from "./footer.styled";
 
-export const Footer = (props)=>{
+export const Footer = ()=>{
     return (
     <StyledFooter> 
         <FooterLinks/>

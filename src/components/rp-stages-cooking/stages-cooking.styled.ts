@@ -1,5 +1,4 @@
 import styled from "@emotion/styled"
-import { css } from '@emotion/react'
 
 export const StyledStagesCooking = styled.ol`
     padding: 0 66px 66px 66px;
