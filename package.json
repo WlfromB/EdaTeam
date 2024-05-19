@@ -9,7 +9,7 @@
         "build": "npm run clean && ijl-cli build --dev",
         "build:prod": "npm run clean && ijl-cli build",
         "clean": "rimraf dist",
-        "lint": "eslint -c eslint.config.mjs ."
+        "lint": "npx eslint eslint.config.mjs"
     },
     "author": "",
     "license": "ISC",
