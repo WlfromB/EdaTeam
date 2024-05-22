@@ -10,6 +10,8 @@ router.get('/userpage-data', (req, res)=>{
 
 router.get('/homepage-data', (req, res)=>{
   res.send(require('../json/homepage-data/success.json'))
-})
+})  
+
+router.use('/auth', require('../auth'));
 
 module.exports = router;

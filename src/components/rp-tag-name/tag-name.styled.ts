@@ -1,8 +1,9 @@
 import styled from "@emotion/styled"
+import {Link as ConnectedLink} from 'react-router-dom';
 
 import { RootColors } from "../../assets/colors/root-colors";
 
-export const StyledTagName = styled.a`
+export const StyledTagName = styled(ConnectedLink)`
     ${RootColors};
     color: var(--color-text-main);
     display: inline-block; /* Чтобы теги были в строку */

@@ -20,7 +20,7 @@ export const UserPageMain = ()=>
         useEffect(()=>{
             fetch(`${URLs.api.main}/userpage-data`)
             .then(response=>response.json())
-            .then(data=>{setDate(data.data.datecreated)})
+            .then(data=>{setDate(data.data.datesignin)})
         },[])    
         
         

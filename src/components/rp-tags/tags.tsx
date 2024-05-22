@@ -4,6 +4,8 @@ import {Tag} from "../rp-tag";
 import { TagName } from "../rp-tag-name";
 
 import { StyledTags } from "./tags.styled";
+import { Link } from '../link';
+import { URLs } from "../../__data__/urls";
 
 
 export const Tags = ()=>{
@@ -18,9 +20,10 @@ export const Tags = ()=>{
 
     return( 
     <StyledTags className="tags"> 
+    
         <Tag/>
         {data.map((element, index) => (
-                <TagName key={index} href={element.href} name={element.name} />
+                <TagName key={index} href={`${URLs.baseUrl}${element.href}`} name={element.name} />
             ))}        
     </StyledTags>
     );
