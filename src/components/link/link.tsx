@@ -8,11 +8,12 @@ interface LinkProps{
     ClassName?:string;
     Href?:string|To;
     children?:any;
+    onClick?:any;
 }
 
 export const Link = (props: LinkProps) => {
     return (
-        <StyledLink className={props.ClassName} bottom = {props?.bottom} to={props?.Href} >
+        <StyledLink className={props.ClassName} bottom = {props?.bottom} to={props?.Href} onClick={props?.onClick}>
             {props.children}
         </StyledLink>
     );

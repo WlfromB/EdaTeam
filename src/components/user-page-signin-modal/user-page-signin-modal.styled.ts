@@ -5,7 +5,7 @@ export const StyledSigninDivs = styled.div`
     ${(props)=>{
         if(props.className == "signin-modal"){
             return css`
-                display: none;
+                display: block;
                 position: fixed;
                 z-index: 1;
                 left: 0;

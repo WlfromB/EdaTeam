@@ -5,7 +5,7 @@ export const StyledLoginDivs = styled.div`
     ${(props)=>{
         if(props.className == "modal"){
             return css`
-                display: none;
+                display: block;
                 position: fixed;
                 z-index: 1;
                 left: 0;

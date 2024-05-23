@@ -7,7 +7,7 @@ import { Main } from "../components/rp-main";
 const Recipe = () => {
   return (
     <>
-      <Header />
+      
       <Main />
       <Footer />
     </>

@@ -7,7 +7,7 @@ import { Footer } from '../components/footer';
 const UserPage = () => {
   return (
     <>
-      <Header />
+      
       <UserPageMain />
       <Footer />
     </>

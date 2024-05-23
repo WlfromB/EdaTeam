@@ -1,1 +1,0 @@
-const EDATEAM_JWT_TOKEN = 'secretyk token';

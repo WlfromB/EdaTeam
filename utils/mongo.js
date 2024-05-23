@@ -24,7 +24,7 @@ const mongoDBConnect = async () =>
 
 const client = mongoDBConnect();
 
-const getDB = async(dbName)=>
+const getDb = async(dbName)=>
 {
     try
     {
@@ -39,5 +39,5 @@ const getDB = async(dbName)=>
 }
 
 module.exports = {
-    getDB,
+    getDb,
 }
