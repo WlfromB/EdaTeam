@@ -2,6 +2,7 @@ import React from "react";
 
 import { StyledLink } from "./link.styled";
 import { To } from "react-router-dom";
+import { URLs } from "../../__data__/urls";
 
 interface LinkProps{
     bottom?:string;
@@ -11,7 +12,7 @@ interface LinkProps{
     onClick?:any;
 }
 
-export const Link = (props: LinkProps) => {
+export const Link = (props: LinkProps) => {    
     return (
         <StyledLink className={props.ClassName} bottom = {props?.bottom} to={props?.Href} onClick={props?.onClick}>
             {props.children}

@@ -1,5 +1,5 @@
 module.exports = {
     port:8099,
     mongoAddress: 'localhost',
-    mongoPort: 27017,
+    mongoPort: 27018,
 }

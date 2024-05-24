@@ -14,7 +14,9 @@ export const StyledLink = styled(ConnectedLink)<{
     font-size:${(props:any)=>!(props.bottom == "true") ? "1.25rem" : "1.1rem"};
     text-align: left;
     line-height: 1.15;
-
+    @media screen and (max-width:768px) {
+                    font-size:0.8rem;   
+                }   
     ${(props)=>{
         if(props.className == "text-login-sigin"){
             return css`
@@ -23,6 +25,26 @@ export const StyledLink = styled(ConnectedLink)<{
                 font-weight: 700;
                 font-size: 1.25rem;
                 color: var(--color-text-head-foot);
+                @media screen and (max-width:768px) {
+                    font-size:0.8rem;   
+                }
+            `;
+        }
+    }}
+    ${(props)=>{
+        if(props.className == "text-login-sigin-logout"){
+            return css`
+                display: block;
+                text-decoration: none;
+                font-weight: 700;
+                font-size: 1.25rem;
+                margin-right: 1.5rem;
+                margin-bottom: 1.25rem;
+                color: var(--color-text-head-foot);
+
+                @media screen and (max-width:768px) {
+                    font-size:0.8rem;   
+                }
             `;
         }
     }}

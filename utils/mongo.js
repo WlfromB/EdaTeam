@@ -1,43 +1,45 @@
-const MDBClient = require('mongodb').MongoClient;
+    const MDBClient = require('mongodb').MongoClient;
 
-const routeConnection = require('../.serverrc');
+    const routeConnection = require('../.serverrc');
 
-const URL = `mongodb://${routeConnection.mongoAddress}:${routeConnection.mongoPort}`;
+    const URL = `mongodb://${routeConnection.mongoAddress}:${routeConnection.mongoPort}/`;
+    
+    const dbInstance = { };
 
-const dbInstance = { };
-
-const mongoDBConnect = async () =>
-{
-    try
+    const mongoDBConnect = async () =>
     {
-        const MongoClient = new MDBClient(URL, 
+        try
         {
-            useUnifiedTopology: true
-        });
-        return await MongoClient.connect();
+            const MongoClient = new MDBClient(URL, 
+            {
+                useUnifiedTopology: true
+            });            
+            MongoClient.on('commandStarted', started => console.log(started));
+            return await MongoClient.connect();
+        }
+        catch(error)
+        {
+            console.error(error);
+        }
     }
-    catch(error)
-    {
-        console.error(error);
-    }
-}
 
-const client = mongoDBConnect();
+    const client = mongoDBConnect();
 
-const getDb = async(dbName)=>
-{
-    try
+    const getDb = async(dbName)=>
     {
-        const cl = await client;
-        dbInstance[dbName] = await cl.db(dbName);
-        return dbInstance[dbName];
+        try
+        {
+            
+            const cl = await client;
+            dbInstance[dbName] = await cl.db(dbName);
+            return dbInstance[dbName];
+        }
+        catch(error)
+        {
+            console.error(error);
+        }
     }
-    catch(error)
-    {
-        console.error(error);
-    }
-}
 
-module.exports = {
-    getDb,
-}
+    module.exports = {
+        getDb,
+    }

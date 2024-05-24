@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Global } from '@emotion/react';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter} from 'react-router-dom';
+
 
 import { globalStyles } from './global.style';
 import { PageRoutes } from './routes';
@@ -8,20 +9,20 @@ import ErrorBoundary from './components/error-boundary/error-boundary';
 import { Header } from './components/header';
 import { UserPageLoginModal } from './components/user-page-login-modal';
 import { UserPageSigninModal } from './components/user-page-signin-modal';
+import { URLs } from './__data__/urls';
 
 const App = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [showLoginModal, setShowLoginModal] = useState(false);
   const [showSigninModal, setShowSigninModal] = useState(false);
-  const [user, setUser] = useState(null);
-
+  const [user, setUser] = useState('');
+  
   useEffect(() => {
-    const token = localStorage.getItem('token');
-    const userData = localStorage.getItem('user');
-    if (token && userData) {
-      setIsAuthenticated(true);
-      setUser(JSON.parse(userData));
-    }
+    const userData = localStorage.getItem('token');
+    if(userData){
+    setIsAuthenticated(true);
+    setUser(userData.toString());}
+    
   }, []);
 
   const handleLoginClick = () => {
@@ -42,8 +43,8 @@ const App = () => {
   };
 
   const handleLoginSubmit = (userData, token) => {
-    localStorage.setItem('token', token);
-    localStorage.setItem('user', JSON.stringify(userData));
+    //.setItem('token', token);
+    localStorage.setItem('token', userData);
 
     setIsAuthenticated(true);
     setUser(userData);
@@ -57,12 +58,9 @@ const App = () => {
 
   const handleLogout = () => {
     localStorage.removeItem('token');
-    localStorage.removeItem('user');
-
     setIsAuthenticated(false);
     setUser(null);
   };
-
   return (
     <ErrorBoundary>
       <BrowserRouter>

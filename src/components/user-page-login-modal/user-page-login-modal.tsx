@@ -11,27 +11,36 @@ import { Link } from "../link";
 import { URLs } from "../../__data__/urls";
 
 export const UserPageLoginModal = ({ onClose, onSubmit, onRegisterClick }) => {
-  const handleFormSubmit = (e) => {
+  const handleFormSubmit = async (e) => {
     e.preventDefault();
-    const username = e.target.username.value;
-    const password = e.target.password.value;
+    const email = e.target.username.value.toString();
+    const password = e.target.password.value.toString();
 
-    fetch(`${URLs.api.main}/userpage-data`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({ username, password })
-    })
-    .then(response => response.json())
-    .then(data => {
-      if (data.success) {
-        onSubmit(data.user, data.token);
-      } else {
-        alert(data.message);
-      }
-    })
-    .catch(error => console.error('Error:', error));
+    const userData = { email, password };
+    try{
+      const response = await fetch(`${URLs.api.main}/auth/sign-in`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(userData),
+    });
+    const result = await response.json();
+    if (response.ok) {
+        // Handle successful sign-up
+        console.log('User signed in successfully:', result);
+        onSubmit(result.data); // Pass the result data to onSubmit
+    }
+      else {
+        // Handle sign-up error
+        console.error('Sign-up error:', result.error);
+        alert(`Error: ${result.error}`);
+    }
+    }
+    catch(error){
+      console.error('Error during sign-up:', error);
+      alert(`Error: ${error.message}`);
+    }
   };
 
   return (
