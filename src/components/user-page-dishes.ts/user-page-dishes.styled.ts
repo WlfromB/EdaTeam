@@ -30,7 +30,6 @@ export const StyledDishes = styled.div`
             return css`
                 display:flex;
                 height: 2.2rem;
-                //background-color: var(--color-background-head-foot);
                 justify-content:center;
                 
                 border-radius:0.25rem;

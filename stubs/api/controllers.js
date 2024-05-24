@@ -45,9 +45,6 @@ const getResponse = (error, data, success = true) => {
 }
 
 const signUp = async ({ email, login, password }) => {
-    // if (db === null) {
-    //     throw new Error('no db connection :((');
-    // }
     try {
     db = await getDb('edateam');
     const userCollection = db.collection(USERS_COLLECTION);
@@ -127,7 +124,6 @@ const getRecipe = async (dishId ) => {
         const recipesCollection = db.collection(RECIPES_COLLECTION);
         const id = dishId.id;
         const recipeData = await recipesCollection.findOne({ _id :new ObjectId(id) } );
-        console.log(recipeData)
         if (recipeData!=null) {
             return _idToId(recipeData);
         }

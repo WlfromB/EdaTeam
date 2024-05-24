@@ -4,7 +4,7 @@ export const StyledFooterTg = styled.img`
     width: 27px; 
     margin-right: 3px; 
 
-/* адаптивная верстка */
+
 @media (max-width:768px) {
         width: 0.8em; 
 
@@ -26,7 +26,6 @@ export const StyledFooterCaption = styled.span`
     justify-content: center; 
     align-items: center; 
 
-/* адаптивная верстка */
 @media (max-width:1000px) {
         font-family: var(--main-font); 
         font-weight: bold; 

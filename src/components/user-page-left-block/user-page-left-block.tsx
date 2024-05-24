@@ -34,7 +34,7 @@ const handleAddRecipe = async (formData) => {
         } else {
             const data = await response.json();
             console.log('Recipe added:', data);
-            handleCloseModal(); // Закрыть модальное окно после успешного добавления рецепта
+            handleCloseModal(); 
         }
     } catch (error) {
         console.error('Error adding recipe:', error);

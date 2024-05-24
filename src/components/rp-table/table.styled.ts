@@ -4,9 +4,9 @@ import { RootColors } from "../../assets/colors/root-colors";
 export const StyledTable = styled.table`
     ${RootColors};
     margin: 30px auto 0;
-    border-collapse: collapse; /* объединяем границы */
-    width: 654px; /* задаем ширину таблицы */
-    background-color: #FDDCC9; /*  фоновый цвет таблицы */
+    border-collapse: collapse; 
+    width: 654px; 
+    background-color: #FDDCC9; 
     color: var(--color-text-main);    
 
     @media (max-width:768px) {

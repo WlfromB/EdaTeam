@@ -8,8 +8,6 @@ export const StyledFooterLogo = styled.img`
   
         height: 7vw;
         width: 7vw;
-        /* width: 60px;  */
-        /* border-radius: 39px;  */
 }    
 
 @media (max-width:768px) {

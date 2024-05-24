@@ -6,7 +6,6 @@ export const StyledFooter = styled.footer`
     width: 100%; 
     height: calc(108px - 15px); 
     padding: 15px; 
-    /* background: linear-gradient(360deg, var(--color-background-head-foot) 0%, #fffefd 100%);  */
     background:var(--color-footer);
     align-items: flex-end; 
     display: flex; 
@@ -19,7 +18,6 @@ export const StyledFooter = styled.footer`
 
 @media (max-width:480px) {
         height: 6vw;
-        /* padding: 0.5em;  */
 }
 
 `;

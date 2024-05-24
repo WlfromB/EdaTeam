@@ -7,6 +7,7 @@ import { StyledHeader } from "./header.styled";
 import { Link } from '../link';
 import { URLs } from "../../__data__/urls";
 import parseJWT from '../../../utils/decode'
+
 export const Header = (props:{ isAuthenticated, user, onLoginClick, onLogout })=>{
   let user;
   if(props.user){

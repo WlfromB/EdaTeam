@@ -1,6 +1,5 @@
 import React from "react";
 
-//import "./style.css";
 import { userIcon, userHeart } from "./index";
 import { Link } from "../link";
 import { StyledRightBlock,

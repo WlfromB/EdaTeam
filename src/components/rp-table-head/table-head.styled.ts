@@ -6,8 +6,8 @@ export const StyledTableHeadRow = styled.th`
     font-family:var(--main-font);
     font-size: 20px;
     font-weight: bold; 
-    border: 1px solid var(--color-border-cells); /*  граница для ячеек */
-    padding: 8px; /*отступ внутри ячеек*/
+    border: 1px solid var(--color-border-cells); 
+    padding: 8px; 
     text-align: left;
     padding: 8px;
 

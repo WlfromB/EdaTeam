@@ -7,8 +7,8 @@ export const StyledTableBRowData = styled.td`
     font-size: 18px;
     font-weight: regular;
 
-    border: 1px solid var(--color-border-cells); /*  граница для ячеек */
-    padding: 8px; /*отступ внутри ячеек*/    
+    border: 1px solid var(--color-border-cells); 
+    padding: 8px; 
 
     @media (max-width:768px) {
         font-size: 0.9em;

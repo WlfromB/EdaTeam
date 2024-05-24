@@ -1,10 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-// import { tableBodyList } from "../rp-table-body/table-body";
 import {StyledTableBRowData} from "../rp-table-body/table-body.styled";
-
-// const totalPrices = { price1: 0, price2: 0, price3: 0 };
-
 
 export const TableFoot = ()=>{
     const [data, setData] = useState([])

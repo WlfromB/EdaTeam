@@ -4,8 +4,8 @@ import { RootColors } from "../../assets/colors/root-colors";
 export const StyledTag = styled.p`
     ${RootColors};
     color: var(--color-text-main);
-    display: inline-block; /* Чтобы теги были в строку */
-    margin-right: 10px; /*Добавляем немного отступов между тегами*/
+    display: inline-block; 
+    margin-right: 10px; 
     font-size: 20px;
     font-weight: regular;
 

@@ -32,12 +32,11 @@ export const UserPageSigninModal = ({ onClose, onSubmit }) => {
             const result = await response.json();
             console.log('2')
             if (response.ok) {
-                // Handle successful sign-up
                 console.log('User signed up successfully:', result);
-                onSubmit(result.data); // Pass the result data to onSubmit
+                onSubmit(result.data); 
             }
              else {
-                // Handle sign-up error
+
                 console.error('Sign-up error:', result.error);
                 alert(`Error: ${result.error}`);
             }
