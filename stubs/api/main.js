@@ -40,7 +40,6 @@ router.post('/get-favorites', async(req,res) =>{
     try {
         const { userId } = req.body;
         const result = await getFavorites(userId);
-        console.log(result)
         return res.status(200).json({ success: true, data: result });
     } catch (error) {
         console.error('Error in POST /get-favorites:', error.message);

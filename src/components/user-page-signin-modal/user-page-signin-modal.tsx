@@ -17,9 +17,6 @@ export const UserPageSigninModal = ({ onClose, onSubmit }) => {
         const password = e.target.password.value.toString();
 
         const userData = { email, login, password };
-        console.log(email)
-        console.log(login)
-        console.log(password)
         try {
             const response = await fetch(`${URLs.api.main}/auth/sign-up`, {
                 method: 'POST',
@@ -28,9 +25,8 @@ export const UserPageSigninModal = ({ onClose, onSubmit }) => {
                 },
                 body: JSON.stringify(userData),
             });
-            console.log('1')
             const result = await response.json();
-            console.log('2')
+
             if (response.ok) {
                 console.log('User signed up successfully:', result);
                 onSubmit(result.data); 
