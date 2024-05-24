@@ -8,7 +8,7 @@ import { URLs } from "../../__data__/urls";
 
 
 
-export function Recipes() {
+export const Recipes = () => {
     const [data, setData] = useState([])
 
     useEffect(()=>{

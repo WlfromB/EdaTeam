@@ -3,20 +3,40 @@ import React, { useEffect, useState } from "react";
 import { UserPageDish } from "../user-page-dish/user-page-dish";
 import { StyledButton, StyledDishes, StyledHeaderDishes } from "./user-page-dishes.styled";
 import { URLs } from "../../__data__/urls";
-
+import parseJWT from '../../../utils/decode'
+import { RecipeForm } from "../recipe-add-from/recipe-add-form";
 export const UserPageDishes = ()=>{
 
     const [data, setData] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
     const itemsPerPage = 4;
-
-    useEffect(() => {
-    fetch(`${URLs.api.main}/userpage-data`)
-    .then(response => response.json())
-    .then(data => {
-      setData(data.data.favoritedishes)
-    })
-    }, []);
+    const decode = parseJWT(localStorage.getItem('token').toString());  
+    // useEffect(() => {
+    //     const response = fetch(`${URLs.api.main}/recipe/favorites`, {
+    //         method: 'POST',
+    //         headers: {
+    //             'Content-Type': 'application/json',
+    //         },
+    //         body: JSON.stringify(decode.payload.id),
+    //     })
+    //     const result =
+    // // fetch(`${URLs.api.main}/userpage-data`)
+    // // .then(response => response.json())
+    // // .then(data => {
+    // //   setData(data.data.favoritedishes)
+    // // })
+    // }, []);
+    const dataHandler = async ()=>{
+        const response = await fetch(`${URLs.api.main}/recipe/favorites`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(decode.payload.id),
+                });
+        const result = await response.json();
+        setData(result);
+    }
 
     const startIndex = (currentPage - 1) * itemsPerPage;
     const endIndex = startIndex + itemsPerPage;

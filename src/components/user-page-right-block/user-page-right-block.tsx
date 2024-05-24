@@ -8,11 +8,15 @@ import { StyledRightBlock,
     StyledRightBlockParagraph
 
  } from "./user-page-right-block.styled";
-export const UserPageRightBlock = (props: any)=>{
+ import parseJWT from '../../../utils/decode'
+export const UserPageRightBlock = ()=>{
+    const decode = parseJWT(localStorage.getItem('token').toString());
+    const login = decode.payload.login;
+    const dateCreated = decode.payload.dateCreated;
     return <StyledRightBlock>
     <StyledRightBlockImage src={userIcon} alt="Аватарка профиля" className="image-profile"/>
-    <StyledRightBlockParagraph>{props.loginUser}</StyledRightBlockParagraph>
-    <StyledRightBlockParagraph>{props.dateCreated}</StyledRightBlockParagraph>
+    <StyledRightBlockParagraph>{login}</StyledRightBlockParagraph>
+    <StyledRightBlockParagraph>{`Зарегистрирован с ...${dateCreated}`}</StyledRightBlockParagraph>
     <StyledRightBlockImage src={userHeart} alt="Переключатель на избранное: сердечко" className="image-favotites"/>
     <Link ClassName="right-block-a" >История</Link>
 </StyledRightBlock>

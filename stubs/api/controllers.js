@@ -4,7 +4,7 @@ const { getDb } = require('../../utils/mongo');
 
 const USERS_COLLECTION = 'users';
 const RECIPES_COLLECTION = 'recipes_collection';
-
+const FAVORITES_USER = 'favorites_user'
 let db =null;
 
 const connect = async () => {
@@ -143,25 +143,28 @@ const getRecipe = async ({ dishId }) => {
 }
 
 const addRecipe = async (recipe) => {
-    if (db === null) {
-        throw new Error('no db connection :((');
-    }
-
     try {
+        if (!db) {
+            db = await connectToDB('your-mongodb-uri-here');
+        }
         const recipesCollection = db.collection(RECIPES_COLLECTION);
         const result = await recipesCollection.insertOne(recipe);
-
-        if (result.insertedCount > 0) {
-            return {
-                success: true,
-                id: result.insertedId
-            };
+        
+        if (!result.insertedId) {
+            throw new Error('Recipe insertion failed');
         }
-        throw new Error('Recipe insertion failed');
+        
+        return {
+            success: true,
+            id: result.insertedId
+        };
     } catch (error) {
-        throw new Error(error);
+        console.error('Error in addRecipe:', error.message);
+        throw new Error(error.message);
     }
-}
+};
+
+
 const requiredFields = (fields) => (req, res, next) => {
     // eslint-disable-next-line no-restricted-syntax
     for (const fieldName of fields) {
@@ -173,6 +176,46 @@ const requiredFields = (fields) => (req, res, next) => {
     next()
 }
 
+const addFavorite = async ({userId, recipeId})=>{
+    if(db === null){
+        throw new Error("No db connection :((")
+    }
+    try{
+        const favorites = db.collection(FAVORITES_USER)
+        const result = await favorites.updateOne(
+        { userId: "userId" }, 
+        { $addToSet: { recipeIds: "recipeId" } }, 
+        { upsert: true } 
+      );
+    }
+    catch(error){
+        console.error(error);
+    }
+}
+
+const getFavorites= async (userId) => {
+    if (!db) {
+        throw new Error("No db connection :((");
+    }
+
+    try {
+        const favoritesCollection = db.collection(FAVORITES_USER);
+        const userFavorites = await favoritesCollection.findOne({ userId });
+
+        if (!userFavorites || !userFavorites.recipeIds || userFavorites.recipeIds.length === 0) {
+            return [];
+        }
+
+        const recipesCollection = db.collection(RECIPES_COLLECTION);
+        const favoriteRecipes = await recipesCollection.find({ _id: { $in: userFavorites.recipeIds } }).toArray();
+
+        return favoriteRecipes;
+    } catch (error) {
+        console.error(error);
+        throw new Error("Failed to get user favorites with recipes");
+    }
+};
+
 module.exports = {
     getUser,
     signUp,
@@ -182,5 +225,6 @@ module.exports = {
     getListRecipes,
     getRecipe,
     addRecipe,
-    requiredFields
+    requiredFields, 
+    getFavorites
 };

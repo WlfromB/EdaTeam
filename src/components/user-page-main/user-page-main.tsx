@@ -27,7 +27,7 @@ export const UserPageMain = ()=>
         return <StyledMain>        
         <StyledSection>            
             <UserPageLeftBlock/>            
-            <UserPageRightBlock loginUser={login} dateCreated={`Зарегистрирован с ...${date}`} />  
+            <UserPageRightBlock  />  
         </StyledSection>       
     </StyledMain>
     }

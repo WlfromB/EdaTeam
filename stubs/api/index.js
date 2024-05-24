@@ -18,4 +18,6 @@ router.get('/homepage-data', (req, res) => {
 
 router.use('/auth', require('./auth'));
 
+router.use('/recipe', require('./user'));
+
 module.exports = router;
