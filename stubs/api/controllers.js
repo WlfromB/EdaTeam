@@ -140,9 +140,7 @@ const getRecipe = async (dishId ) => {
 
 const addRecipe = async (recipe) => {
     try {
-        if (!db) {
-            await connect();
-        }
+        db = await getDb('edateam');
         const recipesCollection = db.collection(RECIPES_COLLECTION);
         const result = await recipesCollection.insertOne(recipe);
         
@@ -172,38 +170,34 @@ const requiredFields = (fields) => (req, res, next) => {
     next()
 }
 
-const addFavorite = async ({userId, recipeId})=>{
-    if(db === null){
-        throw new Error("No db connection :((")
-    }
-    try{
-        const favorites = db.collection(FAVORITES_USER)
-        const result = await favorites.updateOne(
-        { userId: "userId" }, 
-        { $addToSet: { recipeIds: "recipeId" } }, 
-        { upsert: true } 
-      );
-    }
-    catch(error){
-        console.error(error);
-    }
-}
-
-const getFavorites= async (userId) => {
-    if (!db) {
-        throw new Error("No db connection :((");
-    }
-
+const addFavorite = async (userId, recipeId) => {
+    
     try {
+        db = await getDb('edateam');
         const favoritesCollection = db.collection(FAVORITES_USER);
-        const userFavorites = await favoritesCollection.findOne({ userId });
+        const result = await favoritesCollection.updateOne(
+            { userId: new ObjectId(userId) },
+            { $addToSet: { favorites: new ObjectId(recipeId) } },
+            { upsert: true }
+        );
+        return result;
+    } catch (error) {
+        throw new Error('Error adding favorite: ' + error.message);
+    }
+};
 
-        if (!userFavorites || !userFavorites.recipeIds || userFavorites.recipeIds.length === 0) {
+const getFavorites = async (userId) => {
+    try {
+        db = await getDb('edateam');
+        const favoritesCollection = db.collection(FAVORITES_USER);
+        const userFavorites = await favoritesCollection.findOne({ userId: new ObjectId(userId) });
+
+        if (!userFavorites || !userFavorites.favorites || userFavorites.favorites.length === 0) {
             return [];
         }
 
         const recipesCollection = db.collection(RECIPES_COLLECTION);
-        const favoriteRecipes = await recipesCollection.find({ _id: { $in: userFavorites.recipeIds } }).toArray();
+        const favoriteRecipes = await recipesCollection.find({ _id: { $in: userFavorites.favorites } }).toArray();
 
         return favoriteRecipes;
     } catch (error) {
@@ -222,5 +216,6 @@ module.exports = {
     getRecipe,
     addRecipe,
     requiredFields, 
-    getFavorites
+    getFavorites,
+    addFavorite
 };
