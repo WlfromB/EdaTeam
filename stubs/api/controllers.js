@@ -1,4 +1,4 @@
-//const ObjectId = require('mongodb').ObjectId;
+const ObjectId = require('mongodb').ObjectId;
 const getHash = require('pbkdf2-password')();
 const { getDb } = require('../../utils/mongo');
 
@@ -73,7 +73,7 @@ const signUp = async ({ email, login, password }) => {
                 return reject(err);
             }
             const insertedCount  = await userCollection.insertOne({ email, login, password: hash, salt });
-            console.log(insertedCount)
+            
             if (!insertedCount) {
                 return reject(new Error('Insert error!'));
             }
@@ -106,9 +106,7 @@ const getUser = async ({ email }) => {
 
 const getListRecipes = async () => {
     try {
-        if (!db) {
-            db = await connectToDB('your-mongodb-uri-here');
-        }
+        db = await getDb('edateam');
         const recipesCollection = db.collection(RECIPES_COLLECTION);
         const recipesData = await recipesCollection.find().toArray();
 
@@ -123,16 +121,14 @@ const getListRecipes = async () => {
     }
 };
 
-const getRecipe = async ({ dishId }) => {
-    if (db === null) {
-        throw new Error('no db connection :((');
-    }
-
+const getRecipe = async (dishId ) => {
     try {
+        db = await getDb('edateam');
         const recipesCollection = db.collection(RECIPES_COLLECTION);
-        const recipeData = await recipesCollection.findOne({ dishId });
-
-        if (recipeData) {
+        const id = dishId.id;
+        const recipeData = await recipesCollection.findOne({ _id :new ObjectId(id) } );
+        console.log(recipeData)
+        if (recipeData!=null) {
             return _idToId(recipeData);
         }
 
@@ -145,7 +141,7 @@ const getRecipe = async ({ dishId }) => {
 const addRecipe = async (recipe) => {
     try {
         if (!db) {
-            db = await connectToDB('your-mongodb-uri-here');
+            await connect();
         }
         const recipesCollection = db.collection(RECIPES_COLLECTION);
         const result = await recipesCollection.insertOne(recipe);

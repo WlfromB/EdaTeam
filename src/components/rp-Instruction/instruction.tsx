@@ -5,11 +5,11 @@ import { TitleInstruction } from "../rp-title-instruction";
 
 import { StyledInstruction } from "./instruction.styled";
 
-export const Instruction = (_props: any)=>{
+export const Instruction = (data:any)=>{
     return   (
     <StyledInstruction className="instruction"> 
         <TitleInstruction/>
-        <StagesCooking/>
+        <StagesCooking data={data}/>
     </StyledInstruction>
     );
 }

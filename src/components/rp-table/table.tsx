@@ -5,11 +5,11 @@ import { TableBody } from "../rp-table-body";
 import { TableFoot } from "../rp-table-foot";
 import { StyledTable } from "./table.styled";
 
-export const Table = ()=>{
+export const Table = (data:any)=>{
     return( 
         <StyledTable>
             <TableHead/>
-            <TableBody/>
+            <TableBody data = {data}/>
             <TableFoot/>
         </StyledTable>
     );

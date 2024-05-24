@@ -11,7 +11,7 @@ export const URLs = {
         recipe:{
             url:`${baseUrl}${getNavigationsValue('edateam.recipe')}`,
             on:Boolean(getNavigationsValue('edateam.recipe')),
-            getUrl:(recipeId:number)=>generatePath(`${baseUrl}${getNavigationsValue('edateam.recipe')}, ${recipeId}`)
+            getUrl: (recipeId) => generatePath(`${baseUrl}${getNavigationsValue('edateam.recipe')}/:id`, { id: recipeId })
         },
         user:{
             url:`${baseUrl}${getNavigationsValue('edateam.user')}`,

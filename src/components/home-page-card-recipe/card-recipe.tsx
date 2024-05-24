@@ -5,6 +5,7 @@ import { Link } from "../link";
 
 
 export const CardRecipe = (props: any) => {
+    
     return (
         <Wrapper>
             <img className="img-recipe" src={props.srcImg}

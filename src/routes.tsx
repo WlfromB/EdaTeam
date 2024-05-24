@@ -10,7 +10,7 @@ export const PageRoutes =()=>(
     <Routes>
         <Route path={URLs.ui.user.url} element={<UserPage/>}/> 
         <Route path={URLs.baseUrl} element={<HomePage/>}/>
-        <Route path={URLs.ui.recipe.url} element={<Recipe/>}/>
+        <Route path={`${URLs.ui.recipe.url}/:id`} element={<Recipe/>}/>
 
         <Route path="*" element={<h1>Page not found</h1>}/>
     </Routes>

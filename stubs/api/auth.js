@@ -16,7 +16,7 @@ router.post('/sign-in', requiredFields(['email','password']), async (req, res)=>
             
             if(user.password === hash){
                 const {password, salt:_salt, ...rest} = user;
-                const token = jwt.sign(_idToId(rest), "secretyk");
+                const token = jwt.sign(_idToId(rest), EDATEAM_JWT_TOKEN);
                 return res.send(getResponse(null, token));
             }    
             return res.status(400).send(getResponse('Wrong email or password!'));        

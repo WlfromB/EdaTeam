@@ -35,7 +35,6 @@ export const HomePageMain = () => {
                 const result = await response.json();
 
                 if (response.ok) {
-                    console.log(result.data);
                     setRecipes(result.data);
                 } else {
                     setError(result.message);
