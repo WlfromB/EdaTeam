@@ -5,6 +5,7 @@ export const RecipeForm = ({ onSubmit }) => {
         name: '',
         linkVideo: '',
         linkImage: '',
+        description: ''
     });
 
     const [ingredients, setIngredients] = useState([{ name: '', weight: '', price1: '', price2: '', price3: '' }]);
@@ -60,6 +61,9 @@ export const RecipeForm = ({ onSubmit }) => {
 
             <label htmlFor="linkImage">Ссылка на картинку:</label>
             <input type="url" id="linkImage" name="linkImage" value={formData.linkImage} onChange={handleInputChange} required />
+
+            <label htmlFor="description">Описание рецепта:</label>
+            <textarea id="description" name="description" value={formData.description} onChange={handleInputChange} required></textarea>
 
             <h3>Ингредиенты:</h3>
             {ingredients.map((ingredient, index) => (

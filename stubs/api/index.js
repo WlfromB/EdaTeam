@@ -20,4 +20,6 @@ router.use('/auth', require('./auth'));
 
 router.use('/recipe', require('./user'));
 
+router.use('/main', require('./main'));
+
 module.exports = router;

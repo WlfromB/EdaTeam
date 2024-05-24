@@ -30,7 +30,6 @@ router.post('/sign-in', requiredFields(['email','password']), async (req, res)=>
 router.post('/sign-up', requiredFields(['email', 'login', 'password']), async (req, res) => {
     let error = null
     const data = await signUp(req.body).catch((e) => error = e.message)
-    console.log(`-------------------------------${error}`)
     return res.status(error ? 400 : 200).send(getResponse(error, data))
 })
 

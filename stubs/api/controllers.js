@@ -104,24 +104,24 @@ const getUser = async ({ email }) => {
     }
 }
 
-const getListRecipes = async ({ userId = fakeId }) => {
-    if (db === null) {
-        throw new Error('no db connection :((');
-    }
-
+const getListRecipes = async () => {
     try {
-        const recipesCollection = db.collection(RECIPES_COLLECTION);
-        const recipesData = await recipesCollection.find({ userId }).toArray();
-
-        if (recipesData) {
-            return _idToArray(recipesData);
+        if (!db) {
+            db = await connectToDB('your-mongodb-uri-here');
         }
+        const recipesCollection = db.collection(RECIPES_COLLECTION);
+        const recipesData = await recipesCollection.find().toArray();
 
-        throw new Error('No one recipe in db!');
+        if (recipesData.length > 0) {
+            return _idToArray(recipesData);
+        } else {
+            throw new Error('No recipes found in the database!');
+        }
     } catch (error) {
-        throw new Error(error);
+        console.error('Error in getListRecipes:', error.message);
+        throw new Error(error.message);
     }
-}
+};
 
 const getRecipe = async ({ dishId }) => {
     if (db === null) {
