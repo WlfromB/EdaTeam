@@ -1,17 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 import {StyledTableBRowData} from "../rp-table-body/table-body.styled";
 
 export const TableFoot = (data:any)=>{
-  //   const [data, setData] = useState([])
-  //   useEffect(() => {
-  //   fetch('/api/recipe-data')
-  //   .then(response => response.json())
-  //   .then(data => {
-  //     setData(data.table)
-  //   })
-  // }, [])
-console.log(data)
   const totalPrices = data.data.data.reduce((acc, item) => {
     acc.price1 += parseFloat(item.price1.substr(0,item.price1.length-2));
     acc.price2 += parseFloat(item.price2.substr(0,item.price2.length-2));
