@@ -10,7 +10,7 @@ export const Table = (data:any)=>{
         <StyledTable>
             <TableHead/>
             <TableBody data = {data}/>
-            <TableFoot/>
+            <TableFoot data = {data}/>
         </StyledTable>
     );
 }
