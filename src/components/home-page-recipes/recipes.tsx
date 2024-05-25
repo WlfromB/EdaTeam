@@ -7,21 +7,10 @@ import { recipes } from "../../assets"
 import { URLs } from "../../__data__/urls";
 
 
-
-export function Recipes() {
-    const [data, setData] = useState([])
-
-    useEffect(()=>{
-        fetch(`${URLs.api.main}/homepage-data`)
-        .then(response => response.json())
-        .then(data => {
-          setData(data.data)
-        })
-    },[])
-
+export const Recipes = (props: any) => {
     return (
         <StyledRecipes>
-            {data.map((data, index) => (
+            {props.cards.map((data, index) => (
                 <CardRecipe key={index} srcImg={recipes[`${data.src}`.toString()]} altImg={data.alt} Href={`${URLs.ui.recipe.url}${data.href}`} nameRecipe={data.name} />
             ))}
         </StyledRecipes>
