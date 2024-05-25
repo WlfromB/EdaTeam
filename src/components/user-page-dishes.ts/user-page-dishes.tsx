@@ -49,7 +49,7 @@ export const UserPageDishes = () => {
     return (
         <>
             <StyledDishes className="dishes">
-                <StyledHeaderDishes>История</StyledHeaderDishes>
+                <StyledHeaderDishes>Избранное</StyledHeaderDishes>
                 <StyledDishes className="orange-line"></StyledDishes>
                 <ul>
                     {currentItems.map((element, index) => (

@@ -8,7 +8,7 @@ import { URLs } from "../../__data__/urls";
 
 
 export const Recipes = (props:any) => {    
-    const data = props.recipes;
+    const data = props.cards;
     return (
         <StyledRecipes>
             {data.map((element, index) => (            

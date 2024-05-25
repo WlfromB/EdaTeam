@@ -11,7 +11,8 @@ import { UserPageLoginModal } from './components/user-page-login-modal';
 import { UserPageSigninModal } from './components/user-page-signin-modal';
 import { URLs } from './__data__/urls';
 
-const App = () => {
+
+const App = () => {  
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [showLoginModal, setShowLoginModal] = useState(false);
   const [showSigninModal, setShowSigninModal] = useState(false);
