@@ -5,18 +5,18 @@
     "main": "./src/index.tsx",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "ijl-cli server --port=8099 --with-open-browser",
-        "build": "npm run clean && ijl-cli build --dev",
-        "build:prod": "npm run clean && ijl-cli build",
+        "start": "brojs server --port=8099 --with-open-browser",
+        "build": "npm run clean && brojs build --dev",
+        "build:prod": "npm run clean && brojs build",
         "clean": "rimraf dist",
         "lint": "npx eslint eslint.config.mjs"
     },
     "author": "",
     "license": "ISC",
     "dependencies": {
+        "@brojs/cli": "^1.6.3",
         "@emotion/react": "^11.11.4",
         "@emotion/styled": "^11.11.5",
-        "@ijl/cli": "^5.1.0",
         "@types/react": "^18.2.74",
         "@types/react-dom": "^18.2.24",
         "express": "^4.19.2",
